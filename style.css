@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');:root {
   --primary-color: #000000;
   --secondary-color: #ffffff;
-  --background-color: #0f1d9b;
-  --accent-color: #fdc841;
+  --background-color: #3E517A;
+  --accent-color: #B08EA2;
   --grey-color: #f5f5f5;
   --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
   
   --font-primary: "Cal Sans", sans-serif;
-  --font-secondary: "Cal Sans", sans-serif;
+  --font-secondary: "Raleway", sans-serif;
   
   --spacing-xs: 0.2rem;
   --spacing-sm: 0.5rem;
@@ -31,25 +30,21 @@ h4 {
 }
 p {
   font-family: var(--font-secondary);
-  text-align: center;
+  font-weight: 280;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
 }
-
 body {
   font-family: var(--font-secondary);
   line-height: 1.6;
 }
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -123,16 +118,174 @@ body {
 
 /* Stile hero */
 .hero-background {
-  height: 60vh;
+  position: relative;
+  width: 100%;
+  height: auto; 
+  min-height: 100vh;
+  overflow: hidden;
   background-color: rgba(15, 29, 155, 0.1);
-  background-image: linear-gradient(45deg, rgba(15, 29, 155, 0.7), rgba(0, 0, 0, 0.6)), url('/css/fotostock/provasfondo.jpg');
   background-size: cover;
   background-position: center;
-  margin-top: 76px;
+  margin-top: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--secondary-color);
 }
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(144, 127, 159, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Sezione neutral */
+.neutral-text {
+  width: 80%;
+  max-width: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 5px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-size: 0.90rem;
+  background-color: var(--background-color, rgba(255, 255, 255, 0.9));
+  border-radius: 6px;
+  color: var(--secondary-color);
+}
+.hero-background .neutral-text {
+  position: relative;
+  max-height: none;
+  overflow-y: auto;
+  z-index: 2;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  line-height: 1.3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.hero-buttons {
+  display: flex;
+  flex-direction: column;       
+  align-items: center;
+  gap: 12px;                     
+  padding: 15px;
+  overflow-x: hidden;
+  z-index: 2;
+  position: relative;
+}
+.btn-hero {
+  font-family: var(--font-primary);
+  background-color: var(--accent-color);
+  width: 90%;                 
+  max-width: 220px;         
+  padding: 12px 18px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+.btn-hero:hover {
+  background-color: var(--grey-color);
+  color: var(--accent-color);
+}
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;        
+    flex-wrap: wrap;               
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+  }
+  .btn-hero {     
+    width: auto;                 
+    max-width: 250px;             
+    font-size: 1rem;
+    padding: 14px 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-buttons {
+    gap: 20px;                   
+    padding: 30px;
+  }
+  .btn-hero {
+    font-size: 1.1rem;
+    padding: 16px 28px;
+    max-width: 300px;           
+  }
+}
+@media (min-width: 481px) {
+  .hero-background {
+    aspect-ratio: 3/4;
+    margin-top: 40px;
+  }
+  .neutral-text {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 18px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .hero-background .neutral-text {
+    width: 85%;
+    padding: 18px;
+  }
+}
+@media (min-width: 769px) {
+  .hero-background {
+    aspect-ratio: 16/9;
+    margin-top: 70px;
+  }
+  .neutral-text {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .hero-background .neutral-text {
+    width: 70%;
+    max-width: 900px;
+    padding: 25px;
+  }
+  .hero-overlay {
+    background-color: rgba(144, 127, 159, 0.5); 
+  }
+}
+@media (min-width: 1200px) {
+  .neutral-text {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .hero-background .neutral-text {
+    width: 60%;
+    max-width: 1100px;
+  }
+}
+
 
 /* Layout principale */
 main {
@@ -176,7 +329,7 @@ section h2::after {
 
 /* Widget e carousel news */
 .widget {
-  background: linear-gradient(135deg, var(--background-color), #1a2bc7);
+  background: linear-gradient(135deg, var(--background-color), #B08EA2);
   color: var(--secondary-color);
   padding: 15px;
   border-radius: 12px;
@@ -252,34 +405,25 @@ section h2::after {
   transform: scale(1.2);
 }
 
-/* Servizi */ 
+/* Servizi */
 .service-view {
   padding: 2rem 1rem;
   background-color: var(--grey-color);
 }
-#servizi-caf,
-#servizi-patronato,
-#assistenza,
-#sedi-contatti {
+#servizi-caf, #servizi-patronato, #assistenza, #sedi-contatti {
   max-width: 1650px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-#servizi-caf h2,
-#servizi-patronato h2,
-#assistenza h2,
-#sedi-contatti h2 {
-  text-align: center; 
+#servizi-caf h2, #servizi-patronato h2, #assistenza h2, #sedi-contatti h2 {
+  text-align: center;
   color: var(--background-color);
   margin-bottom: 2rem;
   font-size: 2.5rem;
   position: relative;
 }
-#servizi-caf h2:after,
-#servizi-patronato h2:after,
-#assistenza h2:after,
-#sedi-contatti h2:after {
+#servizi-caf h2:after, #servizi-patronato h2:after, #assistenza h2:after, #sedi-contatti h2:after {
   content: "";
   position: absolute;
   bottom: 8px;
@@ -290,34 +434,45 @@ section h2::after {
   background-color: var(--accent-color);
 }
 .service-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr; 
   gap: 15px;
+  width: 100%;
 }
 .service {
-  display: flex;
-  flex-direction: column;
+  display: block; 
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 0px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-  width: calc(50% - 8px);
-  margin-bottom: 15px;
   position: relative;
-  min-height: 350px;
-  flex: 1 1 calc(20% - 20px);
   min-width: 250px;
+}
+.service-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.service-text {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 3;
+  display: block;
 }
 .service:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-.service-text {
-  padding: 1.5rem;
-  flex: 1;
-  position: relative;
-  z-index: 3;
 }
 .service h3 {
   color: var(--background-color);
@@ -350,113 +505,24 @@ section h2::after {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.service-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.service-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
-  z-index: 2;
-}
-.service-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
+
 .service:hover .service-img img {
   transform: scale(1.05);
 }
-@media (max-width: 768px) {
-  .service {
-    width: 100%;
+@media (min-width: 769px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
-@media (min-width: 769px) and (max-width: 1199px) {
-  .service {
-    width: calc(50% - 10px);
-  }
-}
-
 @media (min-width: 1200px) {
-  .service {
-    width: calc(20% - 12px);
+  .service-container {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
-
-/* Sezioni neutrali */
-.neutral {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 25px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: var(--grey-color);
-  text-align: center;
-  transition: var(--transition);
-  border: 1px solid #e9ecef;
-}
-.neutral:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  border-color: var(--background-color);
-}
-.neutral-text {
-  width: 100%;
-  order: 2;
-  text-align: center;
-}
-.neutral-img {
-  width: 100%;
-  max-width: 250px;
-  order: 1;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-}
-.neutral-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  max-height: 200px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.neutral:hover .neutral-img img {
-  transform: scale(1.05);
-}
-.neutral h3 {
-  color: var(--background-color);
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  position: relative;
-  display: inline-block;
-}
-.neutral h3::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color);
-  transition: var(--transition);
-}
-.neutral:hover h3::after {
-  width: 100%;
+@media (min-width: 769px) {
+  .service-container .service:last-child:nth-child(odd) {
+    grid-column: 1 / -1; 
+  }
 }
 
 /* Mappa */
@@ -518,7 +584,7 @@ section h2::after {
   transition: var(--transition);
 }
 #sedi-list li:hover {
-  background-color: rgba(15, 29, 155, 0.05);
+  background-color: var(--grey-color);
   padding-left: 20px;
 }
 
@@ -530,12 +596,12 @@ section h2::after {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 8px;
-  background-color: rgba(15, 29, 155, 0.03);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   font-size: 0.85rem;
 }
 #sedi-list li.active {
-  background-color: rgba(15, 29, 155, 0.1);
+  background-color: var(--grey-color);
   padding-left: 20px;
 }
 .contatti-info p {
@@ -544,8 +610,8 @@ section h2::after {
 .toggle-dettagli {
   font-size: 12px;
   padding: 3px 5px;
-  background-color: var(--background-color);
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -553,7 +619,7 @@ section h2::after {
   transition: var(--transition);
 }
 .toggle-dettagli:hover {
-  background-color: #2a35c7;
+  background-color: var(--background-color);
   transform: scale(1.05);
 }
 
@@ -562,12 +628,13 @@ section h2::after {
   padding: 3px;
 }
 .popup-indirizzo {
-  color: #555;
+  font-family: var(--font-primary);
   font-size: 0.9em;
   display: block;
   margin-bottom: 5px;
 }
 .popup-contatti {
+  font-family: var(--font-secondary);
   margin-top: 3px;
   font-size: 0.95em;
 }
@@ -583,8 +650,8 @@ section h2::after {
   gap: 5px;
 }
 .zoom-controls button {
-  background-color: var(--background-color);
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
   font-size: 20px;
   border: none;
   border-radius: 8px;
@@ -599,12 +666,13 @@ section h2::after {
   transform: scale(1.1);
 }
 
+/* scrollbottom */
 #scrollToTopBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
   background-color: var(--background-color);
-  color: white;
+  color: var(--secondary-color);
   border: none;
   padding: 15px;
   border-radius: 50%;
@@ -615,24 +683,21 @@ section h2::after {
   pointer-events: none; 
   transition: opacity 0.4s ease;
 }
-
 #scrollToTopBtn svg {
   width: 24px;
   height: 24px;
 }
-
 #scrollToTopBtn.show {
   opacity: 1;
   pointer-events: auto;
 }
-
 #scrollToTopBtn:hover {
   background-color: var(--accent-color);
 }
 
 /* Footer */
 footer {
-  background: linear-gradient(to right, #0f1d9b, #1a2bc7);
+  background: var(--background-color);
   color: var(--secondary-color);
   padding: var(--spacing-lg);
   text-align: center;
@@ -680,11 +745,31 @@ footer nav a:hover::after {
   width: 100%;
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+  .neutral-text {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 18px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .hero-background {
+    aspect-ratio: 3/4;
+    margin-top: 60px;
+  } 
+  .hero-background .neutral-text {
+    width: 85%;
+    padding: 18px;
+  }
+}
 @media (max-width: 767px) {
   .mobile-menu-toggle {
     display: block; 
   }
-  
+  #main-header {
+    height: 8vh;
+  }
   #main-nav {
     position: absolute;
     top: 100%;
@@ -695,146 +780,183 @@ footer nav a:hover::after {
     transition: var(--transition);
     overflow: hidden;
   }
-  
   #main-nav.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  
+  } 
   #main-nav ul {
     flex-direction: column;
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
-  }
-  
+  } 
   #main-nav a {
     display: block;
     padding: var(--spacing-md);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
   #main-nav a::after {
     display: none;
   }
 }
-
 @media (min-width: 768px) {
   html {
     scroll-padding-top: 150px;
   }
-
+  .neutral-text {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .hero-background .neutral-text {
+    width: 75%;
+    max-width: 800px;
+    padding: 22px;
+  }
   #main-header h1 {
     font-size: 1.8rem;
   }
-
   #main-nav li a {
     font-size: 1rem;
     padding: 8px 15px;
   }
-
-  .hero-background {
-    height: 250px;
+  #main-nav li {
+    position: relative;
   }
-  
+  #main-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    z-index: 999;
+    padding: 0.5rem 0;
+  }
+  #main-nav li.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  #main-nav .dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+  }
+  #main-nav .dropdown-menu li a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+  .hero-background {
+    height: 500px;
+  }
   main {
     padding: var(--spacing-md);
   }
-  
   .service {
     flex-direction: row;
     text-align: left;
   }
-  
   .service:nth-child(odd) .service-text {
     order: 1;
-  }
-  
+  } 
   .service:nth-child(odd) .service-img {
     order: 2;
-  }
-  
+  } 
   .service-text {
     flex: 2;
-  }
-  
+  }  
   .service-img {
     flex: 1;
   }
-
   .news-slide {
     flex: 0 0 50%;
   }
-
   .sedi-lista ul {
     max-height: 400px;
   }
-
   .mappa-wrapper {
     flex-direction: row;
-  }
-  
+  } 
   .sedi-lista {
     flex: 1 1 300px;
-  }
-  
+  } 
   .mappa-container {
     flex: 2 1 500px;
     padding-bottom: 60%;
   }
-  
   #contatti .contatti-wrapper {
     flex-direction: row;
-  }
-  
+  } 
   #contatti .service {
     flex: 1;
   }
 }
-
 @media (min-width: 1024px) {
   html {
     scroll-padding-top: 120px;
   }
+  .neutral-text {
+    width: 75%;
+    margin-left: 15.5%;
+    margin-right: 15.5%;
+    padding: 25px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .hero-background .neutral-text {
+    width: 70%;
+    max-width: 850px;
+    padding: 25px;
+  } 
+  .hero-background {
+    height: 900px;
+  } 
   main {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing-lg);
   }
-  
   section h2 {
     font-size: 1.6rem;
   }
-
   .news-slide {
     flex: 0 0 33.333%;
   }
-
   .sedi-lista ul {
     max-height: 650px;
-  }
-  
+  } 
   .mappa-wrapper {
     gap: 30px; 
-  }
-  
+  }  
   .sedi-lista {
     flex: 1 1 350px;
   }
-
   .mappa-container {
     flex: 2 1 600px;
     padding-bottom: 50%;
   }
 }
-
 @media (min-width: 1440px) {
+  .neutral-text {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  } 
+  .hero-background .neutral-text {
+    width: 60%;
+    max-width: 1000px;
+  }
+  .hero-background {
+    height: 800px;
+  } 
   main {
     max-width: 1600px;
   }
-  
-  .hero-background {
-    height: 350px;
-  }
-  
   .news-slide {
     flex: 0 0 25%;
   }
