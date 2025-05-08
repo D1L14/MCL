@@ -4,20 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage MCL Genova</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     </head>
     <body>
 
         <header id="main-header">
             <div class="container">
-                <h1>Movimento Cristiano Lavoratori<br>GENOVA</h1>
+                <h1>MCL GENOVA</h1>
                 <nav id="main-nav">
                     <ul>
                         <li><a href="#chisiamo">Chi siamo</a></li>
-                        <li><a href="#servizi-caf">Servizi CAF</a></li>
-                        <li><a href="#servizi-patronato">Servizi Patronato</a></li>
-                        <li><a href="#assistenza">Assistenza</a></li>
+                        <li class="dropdown">
+                            <a href="/servizi.html">Servizi</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/servizi.html#servizi-caf">CAF</a></li>
+                                <li><a href="/servizi.html#servizi-patronato">Patronato</a></li>
+                                <li><a href="/servizi.html#assistenzacolf-badanti">Assistenza colf/badanti</a></li>
+                                <li><a href="/servizi.html#assistenzalegale">Assistenza legale</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/scadenze.html">Scadenze</a></li>
                         <li><a href="#sedi-contatti">Sedi e Contatti</a></li>
                     </ul>
                 </nav>
@@ -25,25 +32,19 @@
             </div>
         </header>
         
-        <div class="hero-background"></div>
+        <div class="hero-background">
+            <img src="/css/fotostock/firsthero.png" alt="hero" class="hero-img">
+            <div class="hero-overlay"></div>
+            <div class="neutral-text" style="background-color: var(--background-color);">
+                <p>Movimento Cristiano Lavoratori (M.C.L.) è un Movimento di lavoratori cristiani a <strong>carattere sociale</strong>, di <strong>solidarietà</strong> e <strong>volontariato senza alcuna finalità di lucro</strong>.<br> 
+                Il M.C.L., intende promuovere l'affermazione dei principi cristiani nella vita, nella cultura, negli ordinamenti, nella legislazione.<br>
+                Per questo intende operare come <strong>Movimento ecclesiale di testimonianza evangelica organizzata</strong> ed in fedeltà agli orientamenti del Magistero della Chiesa, consapevole di un suo specifico ruolo nella società.<br>
+                Esso raggruppa coloro che, nell'applicazione della Dottrina Sociale della Chiesa secondo l'insegnamento del suo Magistero, ravvisano il fondamento e la condizione per un rinnovato ordinamento sociale, in cui siano assicurati, secondo giustizia, il <strong>riconoscimento dei diritti e la soddisfazione delle esigenze spirituali e materiali dei lavoratori</strong>.<br>
+                </p>
+            </div>   
+        </div>
         
         <main>
-
-            <div class="content">
-                <section id="chisiamo">
-                    <h2>Chi siamo, cosa facciamo e perchè</h2>
-                    <article class="neutral">
-                        <div class="neutral-text">
-                            <!--<h3>Chi siamo, cosa facciamo e perchè</h3>-->
-                            <p>Il Movimento Cristiano Lavoratori (M.C.L.) è un Movimento di lavoratori cristiani a carattere sociale, di solidarietà e volontariato senza alcuna finalità di lucro.<br> 
-                            Il M.C.L., intende promuovere l'affermazione dei principi cristiani nella vita, nella cultura, negli ordinamenti, nella legislazione.<br>
-                            Per questo intende operare come Movimento ecclesiale di testimonianza evangelica organizzata ed in fedeltà agli orientamenti del Magistero della Chiesa, consapevole di un suo specifico ruolo nella società.<br>
-                            Esso raggruppa coloro che, nell'applicazione della Dottrina Sociale della Chiesa secondo l'insegnamento del suo Magistero, ravvisano il fondamento e la condizione per un rinnovato ordinamento sociale, in cui siano assicurati, secondo giustizia, il riconoscimento dei diritti e la soddisfazione delle esigenze spirituali e materiali dei lavoratori.<br>
-                            Il Movimento Cristiano Lavoratori ha natura federativa fondata sul principio della sussidiarietà e della solidarietà. Si articola sul territorio in unità di base, unioni provinciali e unioni regionali.</p>
-                        </div>
-                    </article>
-                </section>
-            </div>
             
             <section class="widget">
                 <h3>Novità recenti/Scadenze</h3>
@@ -84,24 +85,6 @@
                                 <img src="/css/fotostock/730.webp" alt="Notizia 4">
                             </div>
                         </div>
-                    
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 5</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 5">
-                            </div>
-                        </div>
-                    
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 6</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 6">
-                            </div>
-                        </div>
                     </div>
                     <div class="carousel-dots" id="carouselDots1"></div>
                 </div> 
@@ -113,98 +96,90 @@
                     
                     <div class="service-container">
                         <article class="service">
-                            <div class="service-text">
-                                <h3>IMU</h3>
-                                <p>L'IMU, imposta municipale unica, è l'imposta dovuta per il possesso di fabbricati (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli.</p>
-                                <p style="color: var(--background-color);">Documentazione necessaria: </p>
-                                <p>Tessera sanitaria dei titolari,
-                                <br> Documento di identità,
-                                <br> Visure catastali e/o atti pubblici,
-                                <br> Valore dell'area per terreni edificabili,
-                                <br> Data di variazione nel caso di cambio di utilizzo dell'immobile
-                                </p>
-                            </div>
                             <div class="service-img">
                                 <img src="/css/fotostock/imu.jpg" alt="IMU">
                             </div>
+                            <div class="service-text">
+                                <h3>IMU</h3>
+                                <p><strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong> (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli. Va pagata al comune corrispondente tramite modello F24 in due rate pari al 50% dell'imposta annua (acconto metà giugno, saldo metà dicembre), oppure in una rata unica pari al 100%.
+                                <br><strong>L'IMU risulta obbligatoria</strong> secondo l'articolo 2 del Dlgs 504 del 1992, è obbligatoria per i seguenti progetti:
+                                <br><strong>Proprietari</strong> di fabbricati, aree fabbricabili e terreni
+                                <br><strong>Titolari</strong> del diritto reale si usofrutto, uso, abitazione, enfiteusi, superficie
+                                <br><strong>Concessionari</strong> nel caso di concessione di aree demaniali
+                                <br><strong>Locatari</strong> di immobili da costruire o in corso di costruzione concessi in locazione finanziaria
+                                <br><strong>Coniuge assegnatario</strong> della casa coniugale a seguito di separazione legale, annullamento, scioglimento o cessazione degli effetti civili del matrimonio (ma solo nel caso di abitazione di lusso)</p>
+                            </div>
+                            
                         </article>
         
                         <article class="service">
-                            <div class="service-text">
-                                <h3>ISEE/ISEEU</h3>
-                                <p>L'ISEE, l'indicatore della situazione economica equivalente, è un'indicatore utile alla valutazione e confronto della situazione economica dei nuclei famigliari che intendano richiedere una prestazione sociale agevolata.</p>
-                                <p>L'ISEEU, l'indicatore della situazione economica equivalente universitaria viene utilizzata dagli studenti per le agevolazioni fiscali universitarie.</p>
-                                <p style="color: var(--background-color);">Documentazione necessaria: </p>
-                                <p>Carta d'identità in corso di validità, 
-                                <br>Codice fiscale del soggetto e dei componenti del nucleo famigliare, 
-                                <br>Modello 730 o modello Unico, 
-                                <br>Contratto di locazione in caso di affitto, 
-                                <br>Certificazione Unica, 
-                                <br>Depositi bancari e giacenza media del conto corrente, 
-                                <br>Documentazione patrimonio immobiliare, 
-                                <br>Targa dei veicoli o mezzi di proprietà
-                                </p>
-                            </div>
                             <div class="service-img">
                                 <img src="/css/fotostock/isee.webp" alt="ISEE/ISEU">
                             </div>
+                            <div class="service-text">
+                                <h3>ISEE/ISEEU</h3>
+                                <p>L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un'indicatore utile alla valutazione e confronto della <strong>situazione economica di un nucleo famigliare</strong> che intendano richiedere una <strong>prestazione sociale agevolata o bonus</strong>.
+                                <br>Stabilisce quindi se una famiglia ha dirittto o meno a determinati sussidi (che dipendono da comune a comune essendo prestazioni locali), come: 
+                                <br><strong>Bonus sociali</strong>, sconti sulle bollette del gas, dell'acqua o dell'energia elettrica
+                                <br><strong>Sconti</strong> sul canone Telecom o Canone Rai
+                                <br><strong>Sconti</strong> sulle tasse universitarie e refezione scolastica
+                                <br><strong>Agevolazioni</strong> per invalidi
+                                <br><strong>Prestazioni</strong> per i minori come l'Assegno Unico Universale</p>
+                                <p>L'ISEEU, l'<strong>indicatore della situazione economica equivalente universitaria</strong> viene utilizzata dagli studenti per le agevolazioni fiscali universitarie.</p>
+                            </div>
+                            
                         </article>
         
                         <article class="service">
-                            <div class="service-text">
-                                <h3>Modello 730</h3>
-                                <p style="color: var(--background-color);">Documentazione necessaria: </p>
-                                <p>Carta d'identità in corso di validità, 
-                                <br>Codice fiscale del soggetto e dei componenti del nucleo famigliare, 
-                                <br>Modello 730 o modello Unico, 
-                                <br>Contratto di locazione in caso di affitto, 
-                                <br>Certificazione Unica, 
-                                <br>Depositi bancari e giacenza media del conto corrente, 
-                                <br>Documentazione patrimonio immobiliare, 
-                                <br>Targa dei veicoli o mezzi di proprietà
-                                </p>
-                            </div>
                             <div class="service-img">
                                 <img src="/css/fotostock/730.webp" alt="Modello 730">
                             </div>
+                            <div class="service-text">
+                                <h3>Modello 730</h3>
+                                <p>Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva. L'Agenzia delle Entrate richiede la ricezione del Modello 730 entro il 30 settembre.
+                                <br>Il modello 730 presenta diversi vantaggi per il contribuente:
+                                <br><strong>Non deve</strong> eseguire alcun calcolo
+                                <br><strong>Nel caso di credito</strong> ottiene il rimborso dell'imposta direttamente nella busta paga o nell arata di pensione nel mese successivo alla presentazione della dichiarazione
+                                <br><strong>Nel caso di debito</strong>, ovvero se deve versare delle somme, queste vengono trattenute dalla retribuzione o dalla pensione direttamente nella busta paga del mese successivo alla presentazione
+                                <br>Il contribuente ha due possibilità:
+                                <br><strong>Compilarlo e Inviarlo autonomamente</strong> assumendosi la responsabilità di quanto dichiarato.
+                                <br><strong>Delegare</strong> la compilazione e l'invio del documento al proprio Caf di fiducia che farà da intermediario.</p>
+                            </div>
+                            
                         </article>
         
                         <article class="service">
-                            <div class="service-text">
-                                <h3>RED</h3>   
-                                <p style="color: var(--background-color);">Documentazione necessaria: </p>
-                                <p>Carta d'identità in corso di validità, 
-                                <br>Codice fiscale del soggetto e dei componenti del nucleo famigliare, 
-                                <br>Modello 730 o modello Unico, 
-                                <br>Contratto di locazione in caso di affitto, 
-                                <br>Certificazione Unica, 
-                                <br>Depositi bancari e giacenza media del conto corrente, 
-                                <br>Documentazione patrimonio immobiliare, 
-                                <br>Targa dei veicoli o mezzi di proprietà
-                                </p>
-                            </div>
                             <div class="service-img">
                                 <img src="/css/fotostock/red.jpg" alt="RED">
                             </div>
+                            <div class="service-text">
+                                <h3>RED</h3>   
+                                <p>La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
+                                <br>Va quindi redatta <strong>obbligatoriamente</strong> solo in determinati casi, come:
+                                <br><strong>Pensionati che possiedono altri redditi</strong> da quelli indicati nel modello 730 e vogliono richiedere prestazioni di sostegno
+                                <br><strong>Pensionati con solo reddito da pensione</strong> (propri e se previsto dei familiari) se la situazione reddituale è variata rispetto a quella dichiarata l'anno precedente
+                                <br><strong>Titolari di prestazioni collegate al reddito</strong> che non comunicano integralmente all'amministrazione finanziaria tutti i loro redditi perchè non dichiarabili su modello 730 o modello REDDITI (lavoro all'estero, interessi bancari, titoli di stato o proventi di quote di investimento, soggetti a ritenuta d'acconto alla fonte a titolo d'imposta o sostitutiva dell'irpef)
+                                <br><strong>Gli esonerati dall'obbligo di presentazione all'Agenzia delle Entrate</strong> della dichiarazione dei redditi ma che sono in possesso di redditi ulteriori a quelli da pensione (coloro che hanno, ad esempio, coloro che hanno un reddito da pensione più il reddiyo dell'abitazione principale)
+                                <br><strong>Titolari di alcune tipologie di redditi rilevanti ai fini previdenziali</strong> (ad esempio, i redditi derivanti da collaborazione coordinata e continuativa o assimilati e lavoro autonomo, anche occasionale)
+                                </p>   
+                            </div>
+                            
                         </article>
         
                         <article class="service">
-                            <div class="service-text">
-                                <h3>Successioni</h3>                                
-                                <p style="color: var(--background-color);">Documentazione necessaria: </p>
-                                <p>Certificato di morte,
-                                <br>Carta d'identità in corso di validità e codice fiscale, 
-                                <br>certificato di ultima residenza del defunto,  
-                                <br>Dichiarazione sostitutiva dell'atto di notorietà, 
-                                <br>Testamento, 
-                                <br>Atti inerenti, 
-                                <br>Documenti bancari, 
-                                <br>Mutui e debiti
-                                </p>
-                            </div>
                             <div class="service-img">
                                 <img src="/css/fotostock/successioni.jpg" alt="Successioni">
                             </div>
+                            <div class="service-text">
+                                <h3>Successioni</h3>                                
+                                <p>Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
+                                <br><strong>Attraverso la dichiarazione di successione</strong>, gli eredi designati dal deceduto o quelli stabiliti dalla legge devono presentare una dichiarazione all'Agenzia delle Entrate entro un anno dalla data del decesso. Lo stesso vale per tutoti o curatoridell'eredità e tutti coloro che sono immessi nel possesso dei beni per effetto della dichiarazioen di morte presunta dell'erede.
+                                <br><strong>Se nell'eredità sono contemplati beni immobili</strong>, deve essere presentata la richiesta di voltura agli uffici al catasto che ha il fine di aggiornare i dati catastali sia per quanto riguarda la proprietà che la misura del possesso.
+                                <br><strong>La successione va presentata telematicamente</strong> all'Agenzia delle Entrate attraverso intermediari fiscali e Caf che completeranno la procedura.
+                                <br>La dichiarazione di successione va presentata in tutti i casi tranne quelli in cui l'eredità non sia di valore superiore a 100mila euro e non comprenda beni immobili o diritti reali immobiliari e contemporaneamente sia devoluta al coniuge o a parenti in linea diretta con il defunto.
+                                </p>
+                            </div>
+                            
                         </article>
                     </div>
                 </section>
@@ -247,24 +222,6 @@
                             </div>
                             <div class="news-img">
                                 <img src="/css/fotostock/730.webp" alt="Notizia 4">
-                            </div>
-                        </div>
-                    
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 5</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 5">
-                            </div>
-                        </div>
-                    
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 6</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 6">
                             </div>
                         </div>
                     </div>
@@ -370,24 +327,6 @@
                                 <img src="/css/fotostock/730.webp" alt="Notizia 4">
                             </div>
                         </div>
-
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 5</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 5">
-                            </div>
-                        </div>  
-
-                        <div class="news-slide">
-                            <div class="news-text">
-                                <h2>Notizia 6</h2>
-                            </div>
-                            <div class="news-img">
-                                <img src="/css/fotostock/730.webp" alt="Notizia 6">
-                            </div>
-                        </div>
                     </div>
                     <div class="carousel-dots" id="carouselDots3"></div>
                 </div> 
@@ -399,11 +338,19 @@
                     <div class="service-container">
                         <article class="service">
                             <div class="service-img">
-                                <img src="/css/fotostock/colf-badanti.jpg" alt="colf/badanti">
+                                <img src="/css/fotostock/colf-badanti.jpg" alt="colf/badanti">   
                             </div>
                             <div class="service-text">
-                                <h3>Assistenza colf/badanti</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
+                                <h3 id="assistenzacolf-badanti">Assistenza colf/badanti</h3>
+                                <p>Il Caf assiste qualsiasi cittadino con un collaboratore domestico alle proprie dipendenze o famiglie che hanno bisogno di assistenza nella regolamentazione del rapporto di lavoro e nei numerosi adempimenti necessari per avvalersi di figure professionali quali colf, badanti, baby sitter o assistenti alla persona
+                                <br><strong>informazioni sul contratto di lavoro</strong> di riferimento
+                                <br><strong>Redazione</strong> della lettera di assunzione
+                                <br><strong>Predisposizione delle comunicazioni e denuncia di lavoro</strong> all'inps e all'Inail 
+                                <br><strong>Elaborazione della busta paga</strong> con calcolo dei giorni di ferie, malattia, maternità ed eventuale infortunio
+                                <br><strong>Calcolo e pagamento contributi</strong> Inps
+                                <br><strong>Predisposizione</strong> della Certificazione Unica
+                                <br><strong>Calcolo e pagamento del Trattamento di fine rapporto</strong> (Tfr)
+                                </p>
                             </div>
                         </article>
             
@@ -412,7 +359,7 @@
                                 <img src="/css/fotostock/assistenza-legale.avif" alt="assistenza legale">
                             </div>
                             <div class="service-text">
-                                <h3>Assistenza legale</h3>
+                                <h3 id="assistenzalegale">Assistenza legale</h3>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
                             </div>                            
                         </article>
@@ -421,10 +368,8 @@
 
             <div class="content">
                 <section id="sedi-contatti">
-                    <h2>Sedi e contatti</h2>
-                    <article class="neutral">
-                        <div class="neutral-text">
-                            <h3>Mappa delle sedi MCL Genova</h3>
+                    <h2>Mappa sedi e contatti</h2>
+                    <article class="map-section">
                             <div class="mappa-wrapper">
                                 <div class="sedi-lista">
                                     <input type="text" id="search" placeholder="Cerca una sede..." onkeyup="filtraSedi()">
@@ -553,7 +498,7 @@
                         carousel.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
                         highlightActiveSlide();
                     }
-                    
+
                     function highlightActiveSlide() {
                         slides.forEach((slide, i) => {
                             slide.classList.toggle('active-slide', i === currentIndex);
@@ -685,16 +630,16 @@
                     nome: "Associazione Amici di Pietranera", 
                     indirizzo: "Via Pietranera, 19, Rovegno",
                     telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
-                    orari: "Lun-Ven: 09-18.00", 
+                    email: "circolomclamicipietranera@pec.it",
+                    orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                     lat: 44.58227358010359, 
                     lng: 9.305217402995476 
                 },  
                 { 
                     nome: "Associazione Cristiana Genitori", 
                     indirizzo: "Via Cambiaso, 2 canc., Campomorone", 
-                    telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
+                    telefono: "3771225600",
+                    email: "associazionecristianagenitori@pec.it",
                     orari: "Lun-Ven: 09-18.00",
                     lat: 44.52881782197134, 
                     lng: 8.868577452660162 
@@ -702,8 +647,8 @@
                 { 
                     nome: "Associazione Il Mulino di Foppiano", 
                     indirizzo: "Frazione Foppiano 21, Rovegno",
-                    telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
+                    telefono: "3397732468",
+                    email: "circolomclmulinodifoppiano@pec.it",
                     orari: "Lun-Ven: 09-18.00", 
                     lat: 44.583119326629905, 
                     lng: 9.319567922090107 
@@ -711,17 +656,17 @@
                 { 
                     nome: "Circolo La Sportiva MCL Preli", 
                     indirizzo: "Salita Preli, 51r, Genova",
-                    telefono: "010 1234567",
+                    telefono: "010 8368809",
                     email: "emailfittizia@gmail.com",
-                    orari: "Lun-Ven: 09-18.00", 
+                    orari: "Lun-Ven: 15:30-19.30 e 21:30-00:30", 
                     lat: 44.44018415472597, 
                     lng: 8.95946525277031 
                 },
                 { 
                     nome: "Circolo MCL Amici Carpeneto", 
                     indirizzo: "Via del Municipio, 47, Fascia", 
-                    telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
+                    telefono: "3663166104",
+                    email: "circolomclamicicarpeneto@pec.it",
                     orari: "Lun-Ven: 09-18.00",
                     lat: 44.582651205439255, 
                     lng: 9.222330352584963 
@@ -738,17 +683,17 @@
                 { 
                     nome: "Circolo MCL Giovanni XXIII", 
                     indirizzo: "Via Vesuvio, 16a/r, Genova",
-                    telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
+                    telefono: "3202622114",
+                    email: "circolomclgegiovannixxiii@pec.acce-ge.it",
                     orari: "Lun-Ven: 09-18.00", 
                     lat: 44.42523165132163, 
                     lng: 8.921859812292416 
                 },
                 { 
-                    nome: "Circolo MCL Giuseppe Fanin", 
+                    nome: "Circolo MCL Giuseppe Fanin",  <!--è in toscana!-->
                     indirizzo: "Corso Torino 4/8, Genova", 
-                    telefono: "010 1234567",
-                    email: "emailfittizia@gmail.com",
+                    telefono: "3356742019",
+                    email: "manuelli.giovanni45@gmail.com",
                     orari: "Lun-Ven: 09-18.00",
                     lat: 44.40443238091789, 
                     lng: 8.952071870897205 
@@ -766,7 +711,7 @@
                     nome: "Circolo Padre Domenico Bonassi", 
                     indirizzo: "Corso Torino 36/3, Genova",
                     telefono: "3474727982",
-                    email: "emailfittizia@gmail.com",
+                    email: "margherita.salvaneschi@gmail.com",
                     orari: "Lun-Ven: 09-13 e 14.30-18.30", 
                     lat: 44.40105347772336, 
                     lng: 8.950512096947845 
@@ -785,7 +730,7 @@
                     indirizzo: "Corso Torino 36/3, Genova",
                     telefono: "010 10584427",
                     email: "datrizio56@gmail.com",
-                    orari: "Lun-Ven: 09-18.00", 
+                    orari: "Lun-Gio: 09-13 e 14:30-18:30 <br> Ven: 09-13 e 14:30-17", 
                     lat: 44.40105347772336, 
                     lng: 8.950512096947845 
                 }, 
