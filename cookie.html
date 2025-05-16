@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cookie MCL</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    </head>
+    <body>
+
+    <header id="main-header">
+        <div class="container">
+            <h1><a href="index.html" style="color: var(--secondary-color); text-decoration: none;">MCL GENOVA</a></h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chisiamo.html">Chi siamo</a></li>
+                    <li class="dropdown">
+                        <a href="servizi.html">Servizi</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="servizi.html#servizi-caf">CAF</a></li>
+                            <li><a href="servizi.html#servizi-patronato">Patronato</a></li>
+                            <li><a href="servizi.html#assistenzacolf-badanti">Assistenza colf/badanti</a></li>
+                            <li><a href="servizi.html#assistenzalegale">Assistenza legale</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#sedi-contatti">Sedi e Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">☰</div>
+        </div>
+    </header>
+    
+    <main>
+        
+        <section id="cookie-privacy">
+            <div class="container">
+                <h2>Cookie Policy</h2>
+                <p>Questo sito utilizza i cookie per garantire il corretto funzionamento delle pagine e migliorare l’esperienza di navigazione. I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l'esperienza per l'utente.</p>
+                <p>La legge afferma che possiamo memorizzare i cookie sul tuo dispositivo se sono strettamente necessari per il funzionamento di questo sito. Per tutti gli altri tipi di cookie abbiamo bisogno del tuo permesso.</p>
+                <p>Questo sito utilizza diversi tipi di cookie. Alcuni cookie sono collocati da servizi di terze parti che compaiono sulle nostre pagine.</p>
+                <p>Puoi in qualsiasi momento modificare o revocare il tuo consenso dalla Dichiarazione dei cookie sul nostro sito web.</p>
+                <p>
+                    <em>Scopri di più su chi siamo, come puoi contattarci e come trattiamo i dati personali nella nostra
+                        <a href="privacy.html">Privacy Policy</a>.
+                    </em>
+                </p>
+            </div>
+        </section>
+
+        <div class="content">
+            <section id="sedi-contatti">
+                <h2>Mappa sedi e contatti</h2>
+                <article class="map-section">
+                        <div class="mappa-wrapper">
+                            <div class="sedi-lista">
+                                <input type="text" id="search" placeholder="Cerca una sede..." onkeyup="filtraSedi()">
+                                <ul id="sedi-list"></ul>
+                            </div>
+                            <div class="mappa-container">
+                                <div id="mappa"></div>
+                                <div class="zoom-controls">
+                                    <button id="zoom-in">＋</button>
+                                    <button id="zoom-out">－</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <button id="scrollToTopBtn" aria-label="Torna su">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+            
+    <footer>
+        <p>© 2025 Movimento Cristiano Lavoratori Genova</p>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+            </ul>
+        </nav>
+    </footer>
+        
+    <script>
+    const track = document.querySelector('.carousel-track');
+    const carouselContainer = document.querySelector('.custom-carousel');
+    let slides = Array.from(track.children);
+
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
+    // Aggiungi i cloni
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, slides[0]);
+
+    slides = Array.from(track.children);
+
+    let currentIndex = 1;
+    let slideWidth = 0;
+
+    function updateSlideWidth() {
+        slideWidth = slides[0].getBoundingClientRect().width;
+    }
+
+    function updateSlidePosition(animated = true) {
+        updateSlideWidth();
+
+        if (!animated) {
+            track.classList.add('no-transition');
+        } else {
+            track.classList.remove('no-transition');
+        }
+
+        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+
+    function goToNextSlide() {
+        if (currentIndex >= slides.length - 1) return;
+
+        currentIndex++;
+        updateSlidePosition();
+
+        if (currentIndex === slides.length - 1) {
+            // Dopo la transizione, salta istantaneamente al primo vero slide
+            setTimeout(() => {
+                track.classList.add('no-transition');
+                currentIndex = 1;
+                updateSlidePosition(false);
+
+                // Forzare reflow per rendere fluido il cambio
+                void track.offsetWidth;
+                track.classList.remove('no-transition');
+            }, 500);
+        }
+    }
+
+    function goToPrevSlide() {
+        if (currentIndex <= 0) return;
+
+        currentIndex--;
+        updateSlidePosition();
+
+        if (currentIndex === 0) {
+            setTimeout(() => {
+                track.classList.add('no-transition');
+                currentIndex = slides.length - 2;
+                updateSlidePosition(false);
+
+                void track.offsetWidth;
+                track.classList.remove('no-transition');
+            }, 500);
+        }
+    }
+
+    // Navigazione manuale
+    document.querySelector('.next').addEventListener('click', () => {
+        goToNextSlide();
+        resetAutoplay();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        goToPrevSlide();
+        resetAutoplay();
+    });
+
+    window.addEventListener('resize', () => {
+        updateSlideWidth();
+        updateSlidePosition(false);
+    });
+
+    window.addEventListener('load', () => {
+        updateSlideWidth();
+        updateSlidePosition(false);
+    });
+
+    // Autoplay
+    let autoplayInterval = setInterval(goToNextSlide, 6000);
+
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(goToNextSlide, 6000);
+    }
+
+    carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoplayInterval);
+    });
+
+    carouselContainer.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(goToNextSlide, 6000);
+    });
+    </script>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('#main-nav');
+            
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const mappa = L.map('mappa', { zoomControl: false }).setView([44.41, 8.94], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mappa);
+
+        const sedi = [
+            { 
+                nome: "Associazione Amici di Pietranera", 
+                indirizzo: "Via Pietranera, 19, Rovegno",
+                telefono: "010 1234567",
+                email: "circolomclamicipietranera@pec.it",
+                orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                lat: 44.58227358010359, 
+                lng: 9.305217402995476 
+            },  
+            { 
+                nome: "Associazione Cristiana Genitori", 
+                indirizzo: "Via Cambiaso, 2 canc., Campomorone", 
+                telefono: "3771225600",
+                email: "associazionecristianagenitori@pec.it",
+                orari: "Lun-Ven: 09-18.00",
+                lat: 44.52881782197134, 
+                lng: 8.868577452660162 
+            },
+            { 
+                nome: "Associazione Il Mulino di Foppiano", 
+                indirizzo: "Frazione Foppiano 21, Rovegno",
+                telefono: "3397732468",
+                email: "circolomclmulinodifoppiano@pec.it",
+                orari: "Lun-Ven: 09-18.00", 
+                lat: 44.583119326629905, 
+                lng: 9.319567922090107 
+            },
+            { 
+                nome: "Circolo La Sportiva MCL Preli", 
+                indirizzo: "Salita Preli, 51r, Genova",
+                telefono: "010 8368809",
+                email: "emailfittizia@gmail.com",
+                orari: "Lun-Ven: 15:30-19.30 e 21:30-00:30", 
+                lat: 44.44018415472597, 
+                lng: 8.95946525277031 
+            },
+            { 
+                nome: "Circolo MCL Amici Carpeneto", 
+                indirizzo: "Via del Municipio, 47, Fascia", 
+                telefono: "3663166104",
+                email: "circolomclamicicarpeneto@pec.it",
+                orari: "Lun-Ven: 09-18.00",
+                lat: 44.582651205439255, 
+                lng: 9.222330352584963 
+            }, 
+            { 
+                nome: "Circolo MCL Benedetto XV", 
+                indirizzo: "Corso Torino 36/3, Genova",
+                telefono: "010 1234567",
+                email: "emailfittizia@gmail.com",
+                orari: "Lun-Ven: 09-18.00", 
+                lat: 44.40105347772336, 
+                lng: 8.950512096947845 
+            },
+            { 
+                nome: "Circolo MCL Giovanni XXIII", 
+                indirizzo: "Via Vesuvio, 16a/r, Genova",
+                telefono: "3202622114",
+                email: "circolomclgegiovannixxiii@pec.acce-ge.it",
+                orari: "Lun-Ven: 09-18.00", 
+                lat: 44.42523165132163, 
+                lng: 8.921859812292416 
+            },
+            { 
+                nome: "Circolo MCL Giuseppe Fanin",  <!--è in toscana!-->
+                indirizzo: "Corso Torino 4/8, Genova", 
+                telefono: "3356742019",
+                email: "manuelli.giovanni45@gmail.com",
+                orari: "Lun-Ven: 09-18.00",
+                lat: 44.40443238091789, 
+                lng: 8.952071870897205 
+            },
+            { 
+                nome: "Circolo MCL Orizzonte", 
+                indirizzo: "Via Martiri di Voltaggio 3, Busalla",
+                telefono: "3476318032",
+                email: "circolo.orizzonte@libero.it",
+                orari: "Lun-Ven: 09-18.00", 
+                lat: 44.57388292309463, 
+                lng: 8.942374103501315 
+            },
+            { 
+                nome: "Circolo Padre Domenico Bonassi", 
+                indirizzo: "Corso Torino 36/3, Genova",
+                telefono: "3474727982",
+                email: "margherita.salvaneschi@gmail.com",
+                orari: "Lun-Ven: 09-13 e 14.30-18.30", 
+                lat: 44.40105347772336, 
+                lng: 8.950512096947845 
+            }, 
+            { 
+                nome: "Unione Provinciale MCL Genova", 
+                indirizzo: "Corso Torino 36/3, Genova", 
+                telefono: "010 10584224",
+                email: "genova@mcl.it",
+                orari: "Lun-Ven: 09-18.00",
+                lat: 44.40105347772336, 
+                lng: 8.950512096947845 
+            }, 
+            { 
+                nome: "Unione Regionale MCL Liguria", 
+                indirizzo: "Corso Torino 36/3, Genova",
+                telefono: "010 10584427",
+                email: "datrizio56@gmail.com",
+                orari: "Lun-Gio: 09-13 e 14:30-18:30 <br> Ven: 09-13 e 14:30-17", 
+                lat: 44.40105347772336, 
+                lng: 8.950512096947845 
+            }, 
+        ];
+
+        const markers = [];
+    
+        sedi.forEach((sede, index) => {
+            const popupContent = `
+                <div class="sede-popup">
+                    <strong>${sede.nome}</strong><br>
+                    <span class="popup-indirizzo">${sede.indirizzo}</span><br>
+                    <div class="popup-contatti">
+                        <span><i class="fas fa-phone"></i> ${sede.telefono}</span><br>
+                        <span><i class="fas fa-envelope"></i> <a href="mailto:${sede.email}">${sede.email}</a></span><br>
+                        <span><i class="fas fa-clock"></i> ${sede.orari}</span>
+                    </div>
+                </div>
+            `;
+        
+            const marker = L.marker([sede.lat, sede.lng])
+                .addTo(mappa)
+                .bindPopup(popupContent);
+            markers.push(marker);
+            
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <div class="sede-header">
+                    <strong>${sede.nome}</strong><br>
+                    <span class="indirizzo">${sede.indirizzo}</span>
+                </div>
+                <div class="sede-dettagli" style="display: none;">
+                    <div class="contatti-info">
+                        <p><i class="fas fa-phone"></i> <a href="tel:${sede.telefono}">${sede.telefono}</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:${sede.email}">${sede.email}</a></p>
+                        <p><i class="fas fa-clock"></i> ${sede.orari}</p>
+                    </div>
+                </div>
+                <button class="toggle-dettagli">Mostra dettagli</button>
+            `;
+            
+            const toggleBtn = listItem.querySelector('.toggle-dettagli');
+            toggleBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const dettagli = listItem.querySelector('.sede-dettagli');
+                const isHidden = dettagli.style.display === 'none';
+                dettagli.style.display = isHidden ? 'block' : 'none';
+                this.textContent = isHidden ? 'Nascondi dettagli' : 'Mostra dettagli';
+            });
+            
+            listItem.addEventListener('click', () => {
+                mappa.setView([sede.lat, sede.lng], 15);
+                marker.openPopup();
+                
+                document.querySelectorAll('#sedi-list li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                listItem.classList.add('active');
+            });
+            
+            document.getElementById('sedi-list').appendChild(listItem);
+        });
+        
+        window.filtraSedi = function() {
+            const input = document.getElementById('search');
+            const filter = input.value.toUpperCase();
+            const ul = document.getElementById('sedi-list');
+            const li = ul.getElementsByTagName('li');
+            
+            for (let i = 0; i < li.length; i++) {
+                const nome = li[i].querySelector('strong').textContent || '';
+                const indirizzo = li[i].querySelector('.indirizzo').textContent || '';
+                const dettagli = li[i].querySelector('.sede-dettagli').textContent || '';
+                
+                if (nome.toUpperCase().indexOf(filter) > -1 || 
+                    indirizzo.toUpperCase().indexOf(filter) > -1 ||
+                    dettagli.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        };
+        
+        document.getElementById('zoom-in').addEventListener('click', () => {
+            mappa.zoomIn();
+        });
+        
+        document.getElementById('zoom-out').addEventListener('click', () => {
+            mappa.zoomOut();
+        });
+    });
+    </script>
+
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        const secondSection = document.querySelectorAll('section')[1];
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > secondSection.offsetTop) {
+            scrollToTopBtn.classList.add('show');
+            } else {
+            scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+            });
+        });
+    </script> 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>

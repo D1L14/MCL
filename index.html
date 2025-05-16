@@ -3,18 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage MCL</title>
-        <link rel="stylesheet" href="style.css"/>
+        <title>Privacy MCL</title>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     </head>
     <body>
 
     <header id="main-header">
         <div class="container">
-            <h1>MCL GENOVA</h1>
+            <h1><a href="index.html" style="color: var(--secondary-color); text-decoration: none;">MCL GENOVA</a></h1>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="index.html#chisiamo">Chi siamo</a></li>
+                    <li><a href="chisiamo.html">Chi siamo</a></li>
                     <li class="dropdown">
                         <a href="servizi.html">Servizi</a>
                         <ul class="dropdown-menu">
@@ -33,10 +33,22 @@
     
     <div class="custom-carousel">
     <div class="carousel-track">
-        <img src="fotostock/firsthero.jpg" alt="Slide 1" class="carousel-slide">
-        <img src="fotostock/secondhero.png" alt="Slide 2" class="carousel-slide">
-        <img src="fotostock/thirdhero.png" alt="Slide 3" class="carousel-slide">
-        <img src="fotostock/fourthyhero.png" alt="Slide 4" class="carousel-slide">
+        <img src="css/fotostock/firsthero.jpg" alt="Slide 1" class="carousel-slide">
+        <div class="carousel-slide slide-with-text">
+            <img src="css/fotostock/secondhero.png" alt="Slide 2">
+            <div class="slide-text">
+                <h2>Benvenuto nella nostra <a href="index.html">homepage</a></h2>
+                <p>Esplora e scopri la realtà del Movimento Cristiano Lavoratori di Genova.<br><a href="#sedi-contatti">Clicca qui</a> per cercare la sede più vicina a te.</p>
+            </div>
+        </div>
+        <div class="carousel-slide slide-with-text">
+            <img src="css/fotostock/thirdhero.png" alt="Slide 3">
+            <div class="slide-text">
+                <h2>Scopri i nostri <a href="servizi.html">servizi</a></h2>
+                <p>Dai servizi del Caf SIAS al Patronato MCL.<br> per maggiori dettagli: <a href="servizi.html#servizi-caf">Caf</a> - <a href="servizi.html#servizi-patronato">Patronato</a></p>
+            </div>
+        </div>
+        <img src="css/fotostock/fourthyhero.png" alt="Slide 4" class="carousel-slide">
     </div>
 
     <button class="carousel-btn prev">&#10094;</button>
@@ -50,7 +62,7 @@
                 <div class="news-carousel" id="newsCarousel">
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -59,7 +71,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -68,7 +80,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -77,7 +89,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -96,7 +108,7 @@
                 <div class="service-container">
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/imu.jpg" alt="IMU">
+                            <img src="css/fotostock/imu.jpg" alt="IMU">
                         </div>
                         <div class="service-text">
                             <h3>IMU</h3>
@@ -113,7 +125,7 @@
     
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/isee.webp" alt="ISEE/ISEU">
+                            <img src="css/fotostock/isee.webp" alt="ISEE/ISEU">
                         </div>
                         <div class="service-text">
                             <h3>ISEE/ISEEU</h3>
@@ -131,7 +143,7 @@
     
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/730.webp" alt="Modello 730">
+                            <img src="css/fotostock/730.webp" alt="Modello 730">
                         </div>
                         <div class="service-text">
                             <h3>Modello 730</h3>
@@ -149,7 +161,7 @@
     
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/red.jpg" alt="RED">
+                            <img src="css/fotostock/red.jpg" alt="RED">
                         </div>
                         <div class="service-text">
                             <h3>RED</h3>   
@@ -167,7 +179,7 @@
     
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/successioni.jpg" alt="Successioni">
+                            <img src="css/fotostock/successioni.jpg" alt="Successioni">
                         </div>
                         <div class="service-text">
                             <h3>Successioni</h3>                                
@@ -190,7 +202,7 @@
                 <div class="news-carousel" id="newsCarousel">
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -199,7 +211,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -208,7 +220,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -217,7 +229,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -236,7 +248,7 @@
                 <div class="service-container">
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/730.webp" alt="Disoccupazione">
+                            <img src="css/fotostock/730.webp" alt="Disoccupazione">
                         </div>
                         <div class="service-text">
                             <h3>Indennità di disoccupazione</h3>
@@ -246,7 +258,7 @@
         
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/730.webp" alt="Maternità">
+                            <img src="css/fotostock/730.webp" alt="Maternità">
                         </div>
                         <div class="service-text">
                             <h3>Indennità di maternità</h3>
@@ -256,7 +268,7 @@
         
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/lavoro.avif" alt="Infortuni">
+                            <img src="css/fotostock/lavoro.avif" alt="Infortuni">
                         </div>
                         <div class="service-text">
                             <h3>Infortuni</h3>
@@ -266,7 +278,7 @@
         
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/invalidita.jpg" alt="Invalidità/Inabilità">
+                            <img src="css/fotostock/invalidita.jpg" alt="Invalidità/Inabilità">
                         </div>
                         <div class="service-text">
                             <h3>Invalidità/Inabilità</h3>
@@ -276,7 +288,7 @@
         
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/pensione.jpg" alt="Pensione">
+                            <img src="css/fotostock/pensione.jpg" alt="Pensione">
                         </div>
                         <div class="service-text">
                             <h3>Pensione</h3>
@@ -293,7 +305,7 @@
                 <div class="news-carousel" id="newsCarousel">
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -302,7 +314,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -311,7 +323,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 1">
+                            <img src="css/fotostock/730.webp" alt="Notizia 1">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEE</h2>
@@ -320,7 +332,7 @@
                     </div>
                     <div class="news-slide">
                         <div class="news-img">
-                            <img src="fotostock/730.webp" alt="Notizia 2">
+                            <img src="css/fotostock/730.webp" alt="Notizia 2">
                         </div>
                         <div class="news-text">
                             <h2>Scadenze ISEEU</h2>
@@ -338,7 +350,7 @@
                 <div class="service-container">
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/colf-badanti.jpg" alt="colf/badanti">   
+                            <img src="css/fotostock/colf-badanti.jpg" alt="colf/badanti">   
                         </div>
                         <div class="service-text">
                             <h3 id="assistenzacolf-badanti">Assistenza colf/badanti</h3>
@@ -356,7 +368,7 @@
         
                     <article class="service">
                         <div class="service-img">
-                            <img src="fotostock/assistenza-legale.avif" alt="assistenza legale">
+                            <img src="css/fotostock/assistenza-legale.avif" alt="assistenza legale">
                         </div>
                         <div class="service-text">
                             <h3 id="assistenzalegale">Assistenza legale</h3>
@@ -499,11 +511,11 @@
     });
 
     // Autoplay
-    let autoplayInterval = setInterval(goToNextSlide, 10000);
+    let autoplayInterval = setInterval(goToNextSlide, 9000);
 
     function resetAutoplay() {
         clearInterval(autoplayInterval);
-        autoplayInterval = setInterval(goToNextSlide, 10000);
+        autoplayInterval = setInterval(goToNextSlide, 9000);
     }
 
     carouselContainer.addEventListener('mouseenter', () => {
@@ -511,7 +523,7 @@
     });
 
     carouselContainer.addEventListener('mouseleave', () => {
-        autoplayInterval = setInterval(goToNextSlide, 6000);
+        autoplayInterval = setInterval(goToNextSlide, 9000);
     });
     </script>
 
