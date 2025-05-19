@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cookie MCL</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     </head>
     <body>
@@ -49,26 +49,15 @@
             </div>
         </section>
 
-        <div class="content">
-            <section id="sedi-contatti">
-                <h2>Mappa sedi e contatti</h2>
-                <article class="map-section">
-                        <div class="mappa-wrapper">
-                            <div class="sedi-lista">
-                                <input type="text" id="search" placeholder="Cerca una sede..." onkeyup="filtraSedi()">
-                                <ul id="sedi-list"></ul>
-                            </div>
-                            <div class="mappa-container">
-                                <div id="mappa"></div>
-                                <div class="zoom-controls">
-                                    <button id="zoom-in">＋</button>
-                                    <button id="zoom-out">－</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </section>
+        <div class="custom-carousel">
+            <div class="carousel-track">
+            <img src="css/fotostock/firsthero.jpg" alt="Slide 1" class="carousel-slide">
+            <img src="css/fotostock/secondhero.png" alt="Slide 2" class="carousel-slide">
+            <img src="css/fotostock/thirdhero.png" alt="Slide 3" class="carousel-slide">
+            <img src="css/fotostock/fourthyhero.png" alt="Slide 4" class="carousel-slide">
+        </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
         </div>
 
     </main>
@@ -210,214 +199,6 @@
                 nav.classList.toggle('active');
             });
         });
-    </script>
-
-    <script>
-            document.addEventListener('DOMContentLoaded', function() {
-        const mappa = L.map('mappa', { zoomControl: false }).setView([44.41, 8.94], 12);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(mappa);
-
-        const sedi = [
-            { 
-                nome: "Associazione Amici di Pietranera", 
-                indirizzo: "Via Pietranera, 19, Rovegno",
-                telefono: "010 1234567",
-                email: "circolomclamicipietranera@pec.it",
-                orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-                lat: 44.58227358010359, 
-                lng: 9.305217402995476 
-            },  
-            { 
-                nome: "Associazione Cristiana Genitori", 
-                indirizzo: "Via Cambiaso, 2 canc., Campomorone", 
-                telefono: "3771225600",
-                email: "associazionecristianagenitori@pec.it",
-                orari: "Lun-Ven: 09-18.00",
-                lat: 44.52881782197134, 
-                lng: 8.868577452660162 
-            },
-            { 
-                nome: "Associazione Il Mulino di Foppiano", 
-                indirizzo: "Frazione Foppiano 21, Rovegno",
-                telefono: "3397732468",
-                email: "circolomclmulinodifoppiano@pec.it",
-                orari: "Lun-Ven: 09-18.00", 
-                lat: 44.583119326629905, 
-                lng: 9.319567922090107 
-            },
-            { 
-                nome: "Circolo La Sportiva MCL Preli", 
-                indirizzo: "Salita Preli, 51r, Genova",
-                telefono: "010 8368809",
-                email: "emailfittizia@gmail.com",
-                orari: "Lun-Ven: 15:30-19.30 e 21:30-00:30", 
-                lat: 44.44018415472597, 
-                lng: 8.95946525277031 
-            },
-            { 
-                nome: "Circolo MCL Amici Carpeneto", 
-                indirizzo: "Via del Municipio, 47, Fascia", 
-                telefono: "3663166104",
-                email: "circolomclamicicarpeneto@pec.it",
-                orari: "Lun-Ven: 09-18.00",
-                lat: 44.582651205439255, 
-                lng: 9.222330352584963 
-            }, 
-            { 
-                nome: "Circolo MCL Benedetto XV", 
-                indirizzo: "Corso Torino 36/3, Genova",
-                telefono: "010 1234567",
-                email: "emailfittizia@gmail.com",
-                orari: "Lun-Ven: 09-18.00", 
-                lat: 44.40105347772336, 
-                lng: 8.950512096947845 
-            },
-            { 
-                nome: "Circolo MCL Giovanni XXIII", 
-                indirizzo: "Via Vesuvio, 16a/r, Genova",
-                telefono: "3202622114",
-                email: "circolomclgegiovannixxiii@pec.acce-ge.it",
-                orari: "Lun-Ven: 09-18.00", 
-                lat: 44.42523165132163, 
-                lng: 8.921859812292416 
-            },
-            { 
-                nome: "Circolo MCL Giuseppe Fanin",  <!--è in toscana!-->
-                indirizzo: "Corso Torino 4/8, Genova", 
-                telefono: "3356742019",
-                email: "manuelli.giovanni45@gmail.com",
-                orari: "Lun-Ven: 09-18.00",
-                lat: 44.40443238091789, 
-                lng: 8.952071870897205 
-            },
-            { 
-                nome: "Circolo MCL Orizzonte", 
-                indirizzo: "Via Martiri di Voltaggio 3, Busalla",
-                telefono: "3476318032",
-                email: "circolo.orizzonte@libero.it",
-                orari: "Lun-Ven: 09-18.00", 
-                lat: 44.57388292309463, 
-                lng: 8.942374103501315 
-            },
-            { 
-                nome: "Circolo Padre Domenico Bonassi", 
-                indirizzo: "Corso Torino 36/3, Genova",
-                telefono: "3474727982",
-                email: "margherita.salvaneschi@gmail.com",
-                orari: "Lun-Ven: 09-13 e 14.30-18.30", 
-                lat: 44.40105347772336, 
-                lng: 8.950512096947845 
-            }, 
-            { 
-                nome: "Unione Provinciale MCL Genova", 
-                indirizzo: "Corso Torino 36/3, Genova", 
-                telefono: "010 10584224",
-                email: "genova@mcl.it",
-                orari: "Lun-Ven: 09-18.00",
-                lat: 44.40105347772336, 
-                lng: 8.950512096947845 
-            }, 
-            { 
-                nome: "Unione Regionale MCL Liguria", 
-                indirizzo: "Corso Torino 36/3, Genova",
-                telefono: "010 10584427",
-                email: "datrizio56@gmail.com",
-                orari: "Lun-Gio: 09-13 e 14:30-18:30 <br> Ven: 09-13 e 14:30-17", 
-                lat: 44.40105347772336, 
-                lng: 8.950512096947845 
-            }, 
-        ];
-
-        const markers = [];
-    
-        sedi.forEach((sede, index) => {
-            const popupContent = `
-                <div class="sede-popup">
-                    <strong>${sede.nome}</strong><br>
-                    <span class="popup-indirizzo">${sede.indirizzo}</span><br>
-                    <div class="popup-contatti">
-                        <span><i class="fas fa-phone"></i> ${sede.telefono}</span><br>
-                        <span><i class="fas fa-envelope"></i> <a href="mailto:${sede.email}">${sede.email}</a></span><br>
-                        <span><i class="fas fa-clock"></i> ${sede.orari}</span>
-                    </div>
-                </div>
-            `;
-        
-            const marker = L.marker([sede.lat, sede.lng])
-                .addTo(mappa)
-                .bindPopup(popupContent);
-            markers.push(marker);
-            
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `
-                <div class="sede-header">
-                    <strong>${sede.nome}</strong><br>
-                    <span class="indirizzo">${sede.indirizzo}</span>
-                </div>
-                <div class="sede-dettagli" style="display: none;">
-                    <div class="contatti-info">
-                        <p><i class="fas fa-phone"></i> <a href="tel:${sede.telefono}">${sede.telefono}</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:${sede.email}">${sede.email}</a></p>
-                        <p><i class="fas fa-clock"></i> ${sede.orari}</p>
-                    </div>
-                </div>
-                <button class="toggle-dettagli">Mostra dettagli</button>
-            `;
-            
-            const toggleBtn = listItem.querySelector('.toggle-dettagli');
-            toggleBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const dettagli = listItem.querySelector('.sede-dettagli');
-                const isHidden = dettagli.style.display === 'none';
-                dettagli.style.display = isHidden ? 'block' : 'none';
-                this.textContent = isHidden ? 'Nascondi dettagli' : 'Mostra dettagli';
-            });
-            
-            listItem.addEventListener('click', () => {
-                mappa.setView([sede.lat, sede.lng], 15);
-                marker.openPopup();
-                
-                document.querySelectorAll('#sedi-list li').forEach(item => {
-                    item.classList.remove('active');
-                });
-                listItem.classList.add('active');
-            });
-            
-            document.getElementById('sedi-list').appendChild(listItem);
-        });
-        
-        window.filtraSedi = function() {
-            const input = document.getElementById('search');
-            const filter = input.value.toUpperCase();
-            const ul = document.getElementById('sedi-list');
-            const li = ul.getElementsByTagName('li');
-            
-            for (let i = 0; i < li.length; i++) {
-                const nome = li[i].querySelector('strong').textContent || '';
-                const indirizzo = li[i].querySelector('.indirizzo').textContent || '';
-                const dettagli = li[i].querySelector('.sede-dettagli').textContent || '';
-                
-                if (nome.toUpperCase().indexOf(filter) > -1 || 
-                    indirizzo.toUpperCase().indexOf(filter) > -1 ||
-                    dettagli.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        };
-        
-        document.getElementById('zoom-in').addEventListener('click', () => {
-            mappa.zoomIn();
-        });
-        
-        document.getElementById('zoom-out').addEventListener('click', () => {
-            mappa.zoomOut();
-        });
-    });
     </script>
 
     <script>
