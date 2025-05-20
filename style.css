@@ -761,11 +761,10 @@ section h2::after {
 #logos {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2px; 
+  align-items: center; 
 }
 #logos img {
-  width: 160px;
+  width: 150px;
   height: auto;
 }
 
