@@ -761,7 +761,8 @@ section h2::after {
 #logos {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  overflow-x: none;
 }
 #logos img {
   width: 150px;
