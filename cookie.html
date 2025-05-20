@@ -4,10 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cookie MCL</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     </head>
     <body>
+
+    <div id="preloader">
+        <img src="css/loghi/stemmamcl.png" alt="Logo MCL" id="preloader-logo">
+    </div>    
 
     <header id="main-header">
         <div class="container">
@@ -49,17 +53,6 @@
             </div>
         </section>
 
-        <div class="custom-carousel">
-            <div class="carousel-track">
-            <img src="fotostock/firsthero.jpg" alt="Slide 1" class="carousel-slide">
-            <img src="fotostock/secondhero.png" alt="Slide 2" class="carousel-slide">
-            <img src="fotostock/thirdhero.png" alt="Slide 3" class="carousel-slide">
-            <img src="fotostock/fourthyhero.png" alt="Slide 4" class="carousel-slide">
-        </div>
-            <button class="carousel-btn prev">&#10094;</button>
-            <button class="carousel-btn next">&#10095;</button>
-        </div>
-
     </main>
 
     <button id="scrollToTopBtn" aria-label="Torna su">
@@ -68,7 +61,13 @@
             <polyline points="5 12 12 5 19 12"></polyline>
         </svg>
     </button>
-            
+       
+    <section id="logos">
+            <img src="css/loghi/mcl.jpg" alt="logo MCL">
+            <img src="css/loghi/cafmcl.jpg" alt="logo MCL">
+            <img src="css/loghi/sias.png" alt="logo MCL">
+    </section>
+
     <footer>
         <p>© 2025 Movimento Cristiano Lavoratori Genova</p>
         <nav aria-label="Footer Navigation">
@@ -80,115 +79,16 @@
     </footer>
         
     <script>
-    const track = document.querySelector('.carousel-track');
-    const carouselContainer = document.querySelector('.custom-carousel');
-    let slides = Array.from(track.children);
-
-    const firstClone = slides[0].cloneNode(true);
-    const lastClone = slides[slides.length - 1].cloneNode(true);
-
-    // Aggiungi i cloni
-    track.appendChild(firstClone);
-    track.insertBefore(lastClone, slides[0]);
-
-    slides = Array.from(track.children);
-
-    let currentIndex = 1;
-    let slideWidth = 0;
-
-    function updateSlideWidth() {
-        slideWidth = slides[0].getBoundingClientRect().width;
-    }
-
-    function updateSlidePosition(animated = true) {
-        updateSlideWidth();
-
-        if (!animated) {
-            track.classList.add('no-transition');
-        } else {
-            track.classList.remove('no-transition');
-        }
-
-        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-    }
-
-    function goToNextSlide() {
-        if (currentIndex >= slides.length - 1) return;
-
-        currentIndex++;
-        updateSlidePosition();
-
-        if (currentIndex === slides.length - 1) {
-            // Dopo la transizione, salta istantaneamente al primo vero slide
+        document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
-                track.classList.add('no-transition');
-                currentIndex = 1;
-                updateSlidePosition(false);
-
-                // Forzare reflow per rendere fluido il cambio
-                void track.offsetWidth;
-                track.classList.remove('no-transition');
-            }, 500);
-        }
-    }
-
-    function goToPrevSlide() {
-        if (currentIndex <= 0) return;
-
-        currentIndex--;
-        updateSlidePosition();
-
-        if (currentIndex === 0) {
-            setTimeout(() => {
-                track.classList.add('no-transition');
-                currentIndex = slides.length - 2;
-                updateSlidePosition(false);
-
-                void track.offsetWidth;
-                track.classList.remove('no-transition');
-            }, 500);
-        }
-    }
-
-    // Navigazione manuale
-    document.querySelector('.next').addEventListener('click', () => {
-        goToNextSlide();
-        resetAutoplay();
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        goToPrevSlide();
-        resetAutoplay();
-    });
-
-    window.addEventListener('resize', () => {
-        updateSlideWidth();
-        updateSlidePosition(false);
-    });
-
-    window.addEventListener('load', () => {
-        updateSlideWidth();
-        updateSlidePosition(false);
-    });
-
-    // Autoplay
-    let autoplayInterval = setInterval(goToNextSlide, 6000);
-
-    function resetAutoplay() {
-        clearInterval(autoplayInterval);
-        autoplayInterval = setInterval(goToNextSlide, 6000);
-    }
-
-    carouselContainer.addEventListener('mouseenter', () => {
-        clearInterval(autoplayInterval);
-    });
-
-    carouselContainer.addEventListener('mouseleave', () => {
-        autoplayInterval = setInterval(goToNextSlide, 6000);
-    });
+                const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 2000);   
+        });
     </script>
-
-    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

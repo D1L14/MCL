@@ -52,6 +52,79 @@ body {
   padding: 0 var(--spacing-md);
 }
 
+/* Loader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#preloader-logo {
+  width: 120px;
+  height: auto;
+  animation: bounceInFromTop 2s ease-out forwards;
+}
+#loading-text {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  margin-top: 20px;
+  position: relative;
+}
+#loading-text::after {
+  content: ".";
+  animation: loadingDots 1s steps(3, end) infinite;
+}
+@keyframes bounceInFromTop {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-25px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  95% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Effetto "Caricamento." -> ".." -> "..." */
+@keyframes loadingDots {
+    0%   { content: "."; }
+    33%  { content: ".."; }
+    66%  { content: "..."; }
+    100% { content: "."; }
+}
+/* Il trucco per far cambiare il testo dinamicamente */
+#loading-text::after {
+    content: ".";
+    animation: loadingDots 1s steps(3, end) infinite;
+}
+@keyframes loadingDots {
+    0%   { content: "."; }
+    33%  { content: ".."; }
+    66%  { content: "..."; }
+    100% { content: "."; }
+}
+
 /* Header e nav */
 #main-header {
   background-color: var(--background-color);
@@ -682,6 +755,18 @@ section h2::after {
 }
 #scrollToTopBtn:hover {
   background-color: var(--accent-color);
+}
+
+/* Loghi */
+#logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px; 
+}
+#logos img {
+  width: 160px;
+  height: auto;
 }
 
 /* Footer */
