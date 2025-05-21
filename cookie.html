@@ -78,16 +78,18 @@
             </ul>
         </nav>
     </footer>
-        
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                setTimeout(() => {
                     preloader.style.display = 'none';
-            }, 3000);   
+                }, 500);
+            }, 2000);   
         });
     </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -98,7 +100,6 @@
             });
         });
     </script>
-
     <script>
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         const secondSection = document.querySelectorAll('section')[0];
