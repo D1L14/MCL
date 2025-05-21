@@ -762,10 +762,11 @@ section h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: none;
+  gap: 2px;
+  overflow-x: hidden;
 }
 #logos img {
-  width: 150px;
+  width: 160px;
   height: auto;
 }
 
@@ -861,17 +862,7 @@ footer nav a:hover::after {
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .hero-background {
-    aspect-ratio: 3/4;
-    margin-top: 60px;
-  } 
-  .hero-background .neutral-text {
-    width: 85%;
-    padding: 18px;
-  }
-}
-@media (max-width: 767px) {
+@media (min-width: 371px) and (max-width: 767px) {
   .mobile-menu-toggle {
     display: block; 
   }
@@ -903,6 +894,17 @@ footer nav a:hover::after {
   }
   #main-nav a::after {
     display: none;
+  }
+  .hero-background {
+    aspect-ratio: 3/4;
+    margin-top: 60px;
+  } 
+  .hero-background .neutral-text {
+    width: 85%;
+    padding: 18px;
+  }
+  #logos img {
+    width: 120px;
   }
 }
 @media (min-width: 768px) {
