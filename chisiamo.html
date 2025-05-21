@@ -353,16 +353,17 @@
             autoplayInterval = setInterval(goToNextSlide, 6000);
         });
     </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                setTimeout(() => {
                     preloader.style.display = 'none';
-            }, 3000);   
+                }, 500);
+            }, 2000);   
         });
     </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -373,7 +374,6 @@
             });
         });
     </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         const mappa = L.map('mappa', { zoomControl: false }).setView([44.41, 8.94], 12);
@@ -579,7 +579,6 @@
             });
         });
     </script>
-
     <script>
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         const secondSection = document.querySelectorAll('section')[0];
@@ -599,8 +598,6 @@
             });
         });
     </script>
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
 </body>
 </html>
