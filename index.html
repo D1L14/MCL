@@ -491,7 +491,6 @@
     const firstClone = slides[0].cloneNode(true);
     const lastClone = slides[slides.length - 1].cloneNode(true);
 
-    // Aggiungi i cloni
     track.appendChild(firstClone);
     track.insertBefore(lastClone, slides[0]);
 
@@ -523,13 +522,11 @@
         updateSlidePosition();
 
         if (currentIndex === slides.length - 1) {
-            // Dopo la transizione, salta istantaneamente al primo vero slide
             setTimeout(() => {
                 track.classList.add('no-transition');
                 currentIndex = 1;
                 updateSlidePosition(false);
 
-                // Forzare reflow per rendere fluido il cambio
                 void track.offsetWidth;
                 track.classList.remove('no-transition');
             }, 500);
@@ -554,7 +551,6 @@
         }
     }
 
-    // Navigazione manuale
     document.querySelector('.next').addEventListener('click', () => {
         goToNextSlide();
         resetAutoplay();
@@ -575,7 +571,6 @@
         updateSlidePosition(false);
     });
 
-    // Autoplay
     let autoplayInterval = setInterval(goToNextSlide, 9000);
 
     function resetAutoplay() {
@@ -595,8 +590,11 @@
         document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                setTimeout(() => {
                     preloader.style.display = 'none';
-            }, 3000);   
+                }, 500);
+            }, 2000);   
         });
     </script>
     <script>
@@ -609,7 +607,6 @@
             });
         });
     </script>
-
     <script>
             document.addEventListener('DOMContentLoaded', function() {
         const mappa = L.map('mappa', { zoomControl: false }).setView([44.41, 8.94], 12);
@@ -817,7 +814,6 @@
         });
     });
     </script>
-
     <script>
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         const secondSection = document.querySelectorAll('section')[0];
