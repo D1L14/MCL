@@ -11,6 +11,7 @@
         <meta property="og:title" content="Movimento Cristiano Lavoratori">
 
         <link rel="stylesheet" href="style.css"/>
+        <script src="javascript/main.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
         <link rel="icon" href="favicon/stemmamcl.ico" type="image/x-icon">
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -86,47 +87,6 @@
             </ul>
         </nav>
     </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(() => {
-                const preloader = document.getElementById('preloader');
-                    preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 2000);   
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const nav = document.querySelector('#main-nav');
-            
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-            });
-        });
-    </script>
-    <script>
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        const secondSection = document.querySelectorAll('section')[0];
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > secondSection.offsetTop) {
-            scrollToTopBtn.classList.add('show');
-            } else {
-            scrollToTopBtn.classList.remove('show');
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-            });
-        });
-    </script> 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>
