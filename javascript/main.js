@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                 lat: 44.58227358010359, 
                 lng: 9.305217402995476, 
-                img: "sedi/amicidipietranera.webp"
+                img: "../sedi/amicidipietranera.webp"
             },  
             { 
                 nome: "Associazione Cristiana Genitori", 
