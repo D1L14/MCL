@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                 lat: 44.58227358010359, 
                 lng: 9.305217402995476, 
-                img: "images/sedi/amicidipietranera.webp"
+                img: "sedi/amicidipietranera.webp"
             },  
             { 
                 nome: "Associazione Cristiana Genitori", 
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             },
             { 
                 nome: "Circolo MCL Giovanni XXIII", 
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-13 e 14.30-18.30", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Provinciale MCL Genova", 
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Regionale MCL Liguria", 
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Gio: 09-13 e 14:30-18:30 <br> Ven: 09-13 e 14:30-17", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
     ]
 
