@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.42523165132163, 
                 lng: 8.921859812292416,
-                tipo: "circolo"
+                tipo: "caf/circolo"
             },
             { 
                 nome: "Circolo MCL Giuseppe Fanin",  
