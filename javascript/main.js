@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                 lat: 44.58227358010359, 
                 lng: 9.305217402995476, 
-                img: "images/sedi/amicidipietranera.webp",
+                img: "sedi/amicidipietranera.webp",
                 tipo: "circolo"
             },  
             { 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
                 tipo: "circolo",
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             },
             { 
                 nome: "Circolo MCL Giovanni XXIII", 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
                 tipo: "caf/patronato",
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Provinciale MCL Genova", 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
                 tipo: "caf/patronato",
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Regionale MCL Liguria", 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
                 tipo: "caf/patronato",
-                img: "images/sedi/cafcorsotorino.webp" 
+                img: "sedi/cafcorsotorino.webp" 
             }, 
     ]
 
