@@ -1,0 +1,144 @@
+serviziCafContainer:
+  titolo_sezione: "Servizi Caf"
+  servizi:
+    - titolo: "IMU"
+      immagine: images/service/imu.webp
+      alt: "Imu"
+      testoHTML: >
+        <strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong> (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli. Va pagata al comune corrispondente tramite modello F24 in due rate pari al 50% dell'imposta annua (acconto metà giugno, saldo metà dicembre), oppure in una rata unica pari al 100%.
+        <br><strong>L'IMU risulta obbligatoria</strong> secondo l'articolo 2 del Dlgs 504 del 1992, è obbligatoria per i seguenti progetti:
+        <br><strong>Proprietari</strong> di fabbricati, aree fabbricabili e terreni
+        <br><strong>Titolari</strong> del diritto reale si usofrutto, uso, abitazione, enfiteusi, superficie
+        <br><strong>Concessionari</strong> nel caso di concessione di aree demaniali
+        <br><strong>Locatari</strong> di immobili da costruire o in corso di costruzione concessi in locazione finanziaria
+        <br><strong>Coniuge assegnatario</strong> della casa coniugale a seguito di separazione legale, annullamento, scioglimento o cessazione degli effetti civili del matrimonio (ma solo nel caso di abitazione di lusso)</p>
+      link: servizi.html#imu
+
+    - titolo: "ISEE/ISEEU" #risolto
+      immagine: images/service/isee.webp 
+      alt: "Isee"
+      testoHTML: >
+        L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un'indicatore utile alla valutazione e confronto della <strong>situazione economica di un nucleo famigliare</strong> che intendano richiedere una <strong>prestazione sociale agevolata o bonus</strong>.
+        <br>Stabilisce quindi se una famiglia ha dirittto o meno a determinati sussidi (che dipendono da comune a comune essendo prestazioni locali), come: 
+        <br><strong>Bonus sociali</strong>, sconti sulle bollette del gas, dell'acqua o dell'energia elettrica
+        <br><strong>Sconti</strong> sul canone Telecom o Canone Rai
+        <br><strong>Sconti</strong> sulle tasse universitarie e refezione scolastica
+        <br><strong>Agevolazioni</strong> per invalidi
+        <br><strong>Prestazioni</strong> per i minori come l'Assegno Unico Universale</p>
+        L'ISEEU, l'<strong>indicatore della situazione economica equivalente universitaria</strong> viene utilizzata dagli studenti per le agevolazioni fiscali universitarie.
+      link: servizi.html#iseeiseeu
+
+    - titolo: "Modello 730"
+      immagine: images/service/730.webp
+      alt: "Modello 730"
+      testoHTML: >
+        Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva. L'Agenzia delle Entrate richiede la ricezione del Modello 730 entro il 30 settembre.
+        <br>Il modello 730 presenta diversi vantaggi per il contribuente:
+        <br><strong>Non deve</strong> eseguire alcun calcolo.
+        <br><strong>Nel caso di credito</strong> ottiene il rimborso dell'imposta direttamente nella busta paga o nell arata di pensione nel mese successivo alla presentazione della dichiarazione.
+        <br><strong>Nel caso di debito</strong>, ovvero se deve versare delle somme, queste vengono trattenute dalla retribuzione o dalla pensione direttamente nella busta paga del mese successivo alla presentazione.
+        <br>Il contribuente ha due possibilità:
+        <br><strong>Compilarlo e Inviarlo autonomamente</strong> assumendosi la responsabilità di quanto dichiarato.
+        <br><strong>Delegare</strong> la compilazione e l'invio del documento al proprio Caf di fiducia che farà da intermediario.</p>
+      link: servizi.html#modello-730
+
+    - titolo: "RED"
+      immagine: images/service/red.webp
+      alt: "Red"
+      testoHTML: >
+        La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
+        <br>Va quindi redatta <strong>obbligatoriamente</strong> solo in determinati casi, come:
+        <br><strong>Pensionati che possiedono altri redditi</strong> da quelli indicati nel modello 730 e vogliono richiedere prestazioni di sostegno.
+        <br><strong>Pensionati con solo reddito da pensione</strong> (propri e se previsto dei familiari) se la situazione reddituale è variata rispetto a quella dichiarata l'anno precedente.
+        <br><strong>Titolari di prestazioni collegate al reddito</strong> che non comunicano integralmente all'amministrazione finanziaria tutti i loro redditi perchè non dichiarabili su modello 730 o modello REDDITI (lavoro all'estero, interessi bancari, titoli di stato o proventi di quote di investimento, soggetti a ritenuta d'acconto alla fonte a titolo d'imposta o sostitutiva dell'irpef).
+        <br><strong>Gli esonerati dall'obbligo di presentazione all'Agenzia delle Entrate</strong> della dichiarazione dei redditi ma che sono in possesso di redditi ulteriori a quelli da pensione (coloro che hanno, ad esempio, coloro che hanno un reddito da pensione più il reddiyo dell'abitazione principale).
+        <br><strong>Titolari di alcune tipologie di redditi rilevanti ai fini previdenziali</strong> (ad esempio, i redditi derivanti da collaborazione coordinata e continuativa o assimilati e lavoro autonomo, anche occasionale).</p>   
+      link: servizi.html#red
+
+    - titolo: "Successioni"
+      immagine: images/service/successioni.webp
+      alt: "Successioni"
+      testoHTML: >
+        Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
+        <br><strong>Attraverso la dichiarazione di successione</strong>, gli eredi designati dal deceduto o quelli stabiliti dalla legge devono presentare una dichiarazione all'Agenzia delle Entrate entro un anno dalla data del decesso. Lo stesso vale per tutoti o curatoridell'eredità e tutti coloro che sono immessi nel possesso dei beni per effetto della dichiarazioen di morte presunta dell'erede.
+        <br><strong>Se nell'eredità sono contemplati beni immobili</strong>, deve essere presentata la richiesta di voltura agli uffici al catasto che ha il fine di aggiornare i dati catastali sia per quanto riguarda la proprietà che la misura del possesso.
+        <br><strong>La successione va presentata telematicamente</strong> all'Agenzia delle Entrate attraverso intermediari fiscali e Caf che completeranno la procedura.
+        <br>La dichiarazione di successione va presentata in tutti i casi tranne quelli in cui l'eredità non sia di valore superiore a 100mila euro e non comprenda beni immobili o diritti reali immobiliari e contemporaneamente sia devoluta al coniuge o a parenti in linea diretta con il defunto.</p>
+      link: servizi.html#successioni
+
+serviziPatronatoContainer:
+  titolo_sezione: "Servizi Patronato"
+  servizi:
+    - titolo: "Indennità di disoccupazione" #risolto
+      immagine: images/service/730.webp
+      alt: "Disoccupazione"
+      testoHTML: >
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
+      link: servizi.html#indennit-di-disoccupazione
+
+    - titolo: "Indennità di maternità" #risolto
+      immagine: images/service/730.webp
+      alt: "Maternità"
+      testoHTML: >
+         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
+      link: servizi.html#indennit-di-maternit
+
+    - titolo: "Infortuni"
+      immagine: images/service/lavoro.webp
+      alt: "Infortuni"
+      testoHTML: >
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
+      link: servizi.html#infortuni
+
+    - titolo: "Invalidità/Inabilità" #risolto
+      immagine: images/service/invalidita.webp
+      alt: "Invalidità/Inabilità"
+      testoHTML: >
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
+      link: servizi.html#invaliditinabilit
+
+    - titolo: "Pensione"
+      immagine: images/service/pensione.webp
+      alt: "Pensione"
+      testoHTML: >
+        <p>Le diverse tipologie di pensione possibili includono:</p>
+          <br><strong> Pensione di vecchiaia</strong>: per lavoratori dipendenti e autonomi che hanno raggiunto l'età pensionabile e i requisiti contributivi.</li>
+          <br><strong> Pensione anticipata</strong>: erogata indipendentemente dall'età anagrafica, ma con un numero minimo di settimane di contribuzione.</li>
+          <br><strong> Assegno Sociale</strong>: dedicato a cittadini con redditi bassi. È soggetto a verifica annuale dei requisiti e non può essere erogato all'estero.</li>
+          <br><strong> Supplemento di pensione</strong>: aumento della pensione basato su contributi versati dopo il pensionamento. Spetta a chi continua a lavorare e versare contributi.</li>
+          <br><strong> Pensione supplementare</strong>: per chi ha contribuito in più gestioni ma non ha raggiunto i requisiti per una pensione autonoma in una singola gestione.</li>
+      link: servizi.html#pensione
+
+serviceContainer:
+  titolo_sezione: "Assistenza"
+  servizi:
+    - titolo: "Assistenza Colf e badanti"
+      immagine: images/service/colf-badanti.webp
+      alt: "Assistenza colf/badanti"
+      testoHTML: >
+        Le diverse tipologie di pensione possibili includono:
+          <br><strong> Pensione di vecchiaia</strong>: per lavoratori dipendenti e autonomi che hanno raggiunto l'età pensionabile e i requisiti contributivi.</li>
+          <br><strong> Pensione anticipata</strong>: erogata indipendentemente dall'età anagrafica, ma con un numero minimo di settimane di contribuzione.</li>
+          <br><strong> Assegno Sociale</strong>: dedicato a cittadini con redditi bassi. È soggetto a verifica annuale dei requisiti e non può essere erogato all'estero.</li>
+          <br><strong> Supplemento di pensione</strong>: aumento della pensione basato su contributi versati dopo il pensionamento. Spetta a chi continua a lavorare e versare contributi.</li>
+          <br><strong> Pensione supplementare</strong>: per chi ha contribuito in più gestioni ma non ha raggiunto i requisiti per una pensione autonoma in una singola gestione.</li>      
+      link: servizi.html#assistenza-colf-e-badanti
+
+    - titolo: "Assistenza legale"
+      immagine: images/service/assistenza-legale.webp
+      alt: "Assistenza legale"
+      testoHTML: >
+        Le diverse tipologie di pensione possibili includono:
+          <br><strong> Pensione di vecchiaia</strong>: per lavoratori dipendenti e autonomi che hanno raggiunto l'età pensionabile e i requisiti contributivi.</li>
+          <br><strong> Pensione anticipata</strong>: erogata indipendentemente dall'età anagrafica, ma con un numero minimo di settimane di contribuzione.</li>
+          <br><strong> Assegno Sociale</strong>: dedicato a cittadini con redditi bassi. È soggetto a verifica annuale dei requisiti e non può essere erogato all'estero.</li>
+          <br><strong> Supplemento di pensione</strong>: aumento della pensione basato su contributi versati dopo il pensionamento. Spetta a chi continua a lavorare e versare contributi.</li>
+          <br><strong> Pensione supplementare</strong>: per chi ha contribuito in più gestioni ma non ha raggiunto i requisiti per una pensione autonoma in una singola gestione.</li>
+      link: servizi.html#assistenza-legale
+
+cookie-privacy:
+  titolo_sezione: "Il Movimento Cristiano Lavoratori"
+  descrizione: >
+    MCL è un movimento di lavoratori cristiani a carattere sociale, di solidarietà e volontariato senza alcuna finalità di lucro. MCL intende promuovere l'affermazione dei principi cristiani nella vita, nella cultura, negli ordinamenti, nella legislazione. Per questo intende operare come Movimento ecclesiale di testimonianza evangelica organizzata...
+  link_approfondimento: "chisiamo.html"
+  testo_bottone: "clicca qui per approfondire"

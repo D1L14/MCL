@@ -6,20 +6,20 @@
 
         <title>Privacy MCL</title>
 
-        <meta property="og:image" content="favicon/stemmamcl.png">
+        <meta property="og:image" content="images/favicon/stemmamcl.png">
         <meta property="og:description" content="Privacy MCL Genova">
         <meta property="og:title" content="Movimento Cristiano Lavoratori">
 
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
         <script src="javascript/main.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-       <link rel="icon" href="favicon/stemmamcl.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+       <link rel="icon" href="images/favicon/stemmamcl.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     </head>
     <body>
 
     <div id="preloader">
-        <img src="favicon/stemmamcl.png" alt="Logo MCL" id="preloader-logo">
+        <img src="images/favicon/stemmamcl.png" alt="Logo MCL" id="preloader-logo">
         <div id="loading-text">Caricamento</div>
     </div>   
 
@@ -47,21 +47,12 @@
     </header>
     
     <main>
-        
         <section id="cookie-privacy">
             <div class="container">
-                <h2>Privacy Policy</h2>
-                <p>La tua privacy è importante per noi. In questa sezione ti spieghiamo come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. L'accesso e la navigazione su questo sito implicano l'accettazione delle condizioni indicate in questa informativa.</p>
-                <p>I dati forniti volontariamente tramite moduli, email o altri strumenti di contatto verranno trattati nel rispetto della normativa vigente (Regolamento UE 2016/679 - GDPR).</p>
-                <p>Non condividiamo le tue informazioni con terze parti se non quando necessario per l'erogazione di un servizio da te richiesto, o per adempiere a obblighi legali.</p>
-                <p>
-                    <em>Hai il diritto di accedere, modificare o cancellare i tuoi dati personali in qualsiasi momento</em>. Per farlo, puoi contattarci direttamente tramite i recapiti forniti sul sito.</p>
-                <p>Per maggiori dettagli su come utilizziamo i cookie, consulta la nostra
-                    <a href="cookie.html">Cookie Policy</a>.
-                </p>
+            <h2 id="privacy-title"></h2>
+            <div id="privacy-content"></div>
             </div>
         </section>
-
     </main>
 
     <button id="scrollToTopBtn" aria-label="Torna su">
@@ -72,9 +63,9 @@
     </button>
          
     <section id="logos">
-            <img src="logos/mcl.jpg" alt="logo MCL">
-            <img src="logos/cafmcl.jpg" alt="logo MCL">
-            <img src="logos/sias.png" alt="logo MCL">
+            <img src="images/logos/mcl.jpg" alt="logo MCL">
+            <img src="images/logos/cafmcl.jpg" alt="logo MCL">
+            <img src="images/logos/sias.png" alt="logo MCL">
     </section>
 
     <footer>
@@ -86,6 +77,27 @@
             </ul>
         </nav>
     </footer>
+    <script>
+    // Simuliamo che questo sia il contenuto che Netlify CMS salva nel file privacy.yml
+    const privacyData = {
+        title: "Privacy Policy",
+        paragraphs: [
+        "La tua privacy è importante per noi. In questa sezione ti spieghiamo come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. L'accesso e la navigazione su questo sito implicano l'accettazione delle condizioni indicate in questa informativa.",
+        "I dati forniti volontariamente tramite moduli, email o altri strumenti di contatto verranno trattati nel rispetto della normativa vigente (Regolamento UE 2016/679 - GDPR).",
+        "Non condividiamo le tue informazioni con terze parti se non quando necessario per l'erogazione di un servizio da te richiesto, o per adempiere a obblighi legali.",
+        "Hai il diritto di accedere, modificare o cancellare i tuoi dati personali in qualsiasi momento. Per farlo, puoi contattarci direttamente tramite i recapiti forniti sul sito.",
+        'Per maggiori dettagli su come utilizziamo i cookie, consulta la nostra <a href="cookie.html">Cookie Policy</a>.'
+        ]
+    };
+
+    document.getElementById('privacy-title').textContent = privacyData.title;
+    const contentDiv = document.getElementById('privacy-content');
+    privacyData.paragraphs.forEach(p => {
+        const paragraph = document.createElement('p');
+        paragraph.innerHTML = p;
+        contentDiv.appendChild(paragraph);
+    });
+    </script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>

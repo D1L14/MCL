@@ -6,20 +6,20 @@
 
         <title>Homepage MCL</title>
 
-        <meta property="og:image" content="favicon/stemmamcl.png">
+        <meta property="og:image" content="images/favicon/stemmamcl.png">
         <meta property="og:description" content="Il tuo Caf MCL e Patronato Sias di fiducia">
         <meta property="og:title" content="Movimento Cristiano Lavoratori">
 
-        <link rel="stylesheet" href="style.css"/>
-        <script src="javascript/main.js" defer></script>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="javascript/main.js" defer></script> <!--generale-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-        <link rel="icon" href="favicon/stemmamcl.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" href="images/favicon/stemmamcl.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     </head>
     <body>
 
     <div id="preloader">
-        <img src="favicon/stemmamcl.png" alt="Logo MCL" id="preloader-logo">
+        <img src="images/favicon/stemmamcl.png" alt="Logo MCL" id="preloader-logo">
         <div id="loading-text">Caricamento</div>
     </div>
 
@@ -46,395 +46,58 @@
     </header>
     
     <div class="custom-carousel">
-    <div class="carousel-track">
-        <img src="homecarousel/mclwallpaper.jpg" alt="Slide mclwallpaper" class="carousel-slide">
-        <div class="carousel-slide slide-with-text">
-            <img src="homecarousel/peoples.png" alt="Slide peoples">
-            <div class="slide-text">
-                <h2>Benvenuto nella homepage MCL Genova</a></h2>
-                <p>Esplora e scopri la realtà del Movimento Cristiano Lavoratori di Genova.<br> Esplora la mappa e trova la sede genovese più vicina: <a href="#sedi-contatti">Mappa sedi MCL Genova</a></p>
-            </div>
-        </div>
-        <img src="homecarousel/cafwallpaper.jpg" alt="Slide cafwallpaper" class="carousel-slide">
-        <div class="carousel-slide slide-with-text">
-            <img src="homecarousel/couple.png" alt="Slide couple">
-            <div class="slide-text">
-                <h2>Scopri i nostri <a href="servizi.html">servizi</a></h2>
-                <p>Dai servizi del Caf SIAS al Patronato MCL.<br> per maggiori dettagli: <a href="servizi.html#servizi-caf">Caf</a> - <a href="servizi.html#servizi-patronato">Patronato</a></p>
-            </div>
-        </div>
-        <img src="homecarousel/siaswallpaper.png" alt="Slide siaswallpaper" class="carousel-slide">
-        <img src="homecarousel/scu.png" alt="Slide Servizio Civile Universale" class="carousel-slide">
+        <div class="carousel-track" id="carouselHomepage"></div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
     </div>
 
-    <button class="carousel-btn prev">&#10094;</button>
-    <button class="carousel-btn next">&#10095;</button>
-    </div>
-
-    <main>    
+    <main>
+            
         <section class="widget">
-            <h3>Notizie/eventi</h3>
+            <h3 id="titoloNotizieEventi"></h3>
             <div class="news-carousel-wrapper">
-                <div class="news-carousel" id="newsCarousel">
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 1">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 2">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 3">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 4">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
+                <div class="news-carousel" id="newsCarousel1">
                 </div>
-                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </section>
 
         <div class="service-view">
             <section id="servizi-caf">
-                <h2>Servizi Caf</h2>
-                
-                <div class="service-container">
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/imu.webp" alt="IMU">
-                        </div>
-                        <div class="service-text">
-                            <h3>IMU</h3>
-                            <p><strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong> (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli. Va pagata al comune corrispondente tramite modello F24 in due rate pari al 50% dell'imposta annua (acconto metà giugno, saldo metà dicembre), oppure in una rata unica pari al 100%.
-                            <br><strong>L'IMU risulta obbligatoria</strong> secondo l'articolo 2 del Dlgs 504 del 1992, è obbligatoria per i seguenti progetti:
-                            <br><strong>Proprietari</strong> di fabbricati, aree fabbricabili e terreni
-                            <br><strong>Titolari</strong> del diritto reale si usofrutto, uso, abitazione, enfiteusi, superficie
-                            <br><strong>Concessionari</strong> nel caso di concessione di aree demaniali
-                            <br><strong>Locatari</strong> di immobili da costruire o in corso di costruzione concessi in locazione finanziaria
-                            <br><strong>Coniuge assegnatario</strong> della casa coniugale a seguito di separazione legale, annullamento, scioglimento o cessazione degli effetti civili del matrimonio (ma solo nel caso di abitazione di lusso)</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Caf di fiducia clicca:</em> 
-                                <a href="servizi.html#imu">Documentazione completa</a>.
-                            </p>
-                        </div>
-                        
-                    </article>
-    
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/isee.webp" alt="ISEE/ISEU">
-                        </div>
-                        <div class="service-text">
-                            <h3>ISEE/ISEEU</h3>
-                            <p>L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un'indicatore utile alla valutazione e confronto della <strong>situazione economica di un nucleo famigliare</strong> che intendano richiedere una <strong>prestazione sociale agevolata o bonus</strong>.
-                            <br>Stabilisce quindi se una famiglia ha dirittto o meno a determinati sussidi (che dipendono da comune a comune essendo prestazioni locali), come: 
-                            <br><strong>Bonus sociali</strong>, sconti sulle bollette del gas, dell'acqua o dell'energia elettrica
-                            <br><strong>Sconti</strong> sul canone Telecom o Canone Rai
-                            <br><strong>Sconti</strong> sulle tasse universitarie e refezione scolastica
-                            <br><strong>Agevolazioni</strong> per invalidi
-                            <br><strong>Prestazioni</strong> per i minori come l'Assegno Unico Universale</p>
-                            <p>L'ISEEU, l'<strong>indicatore della situazione economica equivalente universitaria</strong> viene utilizzata dagli studenti per le agevolazioni fiscali universitarie.</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Caf di fiducia clicca:</em> 
-                                <a href="servizi.html#isee/iseeu">Documentazione completa</a>.
-                            </p>
-                        </div>
-                        
-                    </article>
-    
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/730.webp" alt="Modello 730">
-                        </div>
-                        <div class="service-text">
-                            <h3>Modello 730</h3>
-                            <p>Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva. L'Agenzia delle Entrate richiede la ricezione del Modello 730 entro il 30 settembre.
-                            <br>Il modello 730 presenta diversi vantaggi per il contribuente:
-                            <br><strong>Non deve</strong> eseguire alcun calcolo
-                            <br><strong>Nel caso di credito</strong> ottiene il rimborso dell'imposta direttamente nella busta paga o nell arata di pensione nel mese successivo alla presentazione della dichiarazione
-                            <br><strong>Nel caso di debito</strong>, ovvero se deve versare delle somme, queste vengono trattenute dalla retribuzione o dalla pensione direttamente nella busta paga del mese successivo alla presentazione
-                            <br>Il contribuente ha due possibilità:
-                            <br><strong>Compilarlo e Inviarlo autonomamente</strong> assumendosi la responsabilità di quanto dichiarato.
-                            <br><strong>Delegare</strong> la compilazione e l'invio del documento al proprio Caf di fiducia che farà da intermediario.</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Caf di fiducia clicca:</em> 
-                                <a href="servizi.html#modello730">Documentazione completa</a>.
-                            </p>
-                        </div>
-                        
-                    </article>
-    
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/red.webp" alt="RED">
-                        </div>
-                        <div class="service-text">
-                            <h3>RED</h3>   
-                            <p>La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
-                            <br>Va quindi redatta <strong>obbligatoriamente</strong> solo in determinati casi, come:
-                            <br><strong>Pensionati che possiedono altri redditi</strong> da quelli indicati nel modello 730 e vogliono richiedere prestazioni di sostegno
-                            <br><strong>Pensionati con solo reddito da pensione</strong> (propri e se previsto dei familiari) se la situazione reddituale è variata rispetto a quella dichiarata l'anno precedente
-                            <br><strong>Titolari di prestazioni collegate al reddito</strong> che non comunicano integralmente all'amministrazione finanziaria tutti i loro redditi perchè non dichiarabili su modello 730 o modello REDDITI (lavoro all'estero, interessi bancari, titoli di stato o proventi di quote di investimento, soggetti a ritenuta d'acconto alla fonte a titolo d'imposta o sostitutiva dell'irpef)
-                            <br><strong>Gli esonerati dall'obbligo di presentazione all'Agenzia delle Entrate</strong> della dichiarazione dei redditi ma che sono in possesso di redditi ulteriori a quelli da pensione (coloro che hanno, ad esempio, coloro che hanno un reddito da pensione più il reddiyo dell'abitazione principale)
-                            <br><strong>Titolari di alcune tipologie di redditi rilevanti ai fini previdenziali</strong> (ad esempio, i redditi derivanti da collaborazione coordinata e continuativa o assimilati e lavoro autonomo, anche occasionale)</p>   
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Caf di fiducia clicca:</em> 
-                                <a href="servizi.html#red">Documentazione completa</a>.
-                            </p>
-                        </div>
-                        
-                    </article>
-    
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/successioni.webp" alt="Successioni">
-                        </div>
-                        <div class="service-text">
-                            <h3>Successioni</h3>                                
-                            <p>Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
-                            <br><strong>Attraverso la dichiarazione di successione</strong>, gli eredi designati dal deceduto o quelli stabiliti dalla legge devono presentare una dichiarazione all'Agenzia delle Entrate entro un anno dalla data del decesso. Lo stesso vale per tutoti o curatoridell'eredità e tutti coloro che sono immessi nel possesso dei beni per effetto della dichiarazioen di morte presunta dell'erede.
-                            <br><strong>Se nell'eredità sono contemplati beni immobili</strong>, deve essere presentata la richiesta di voltura agli uffici al catasto che ha il fine di aggiornare i dati catastali sia per quanto riguarda la proprietà che la misura del possesso.
-                            <br><strong>La successione va presentata telematicamente</strong> all'Agenzia delle Entrate attraverso intermediari fiscali e Caf che completeranno la procedura.
-                            <br>La dichiarazione di successione va presentata in tutti i casi tranne quelli in cui l'eredità non sia di valore superiore a 100mila euro e non comprenda beni immobili o diritti reali immobiliari e contemporaneamente sia devoluta al coniuge o a parenti in linea diretta con il defunto.</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Caf di fiducia clicca:</em> 
-                                <a href="servizi.html#successioni">Documentazione completa</a>.
-                            </p>
-                        </div>
-                        
-                    </article>
+                <h2 id="titoloServiziCaf"></h2>
+                <div class="service-container" id="serviziCafContainer">
                 </div>
             </section>
         </div>
         
         <section class="widget">
-            <h3>Novità CAF</h3>
+            <h3 id="titoloNovitaCaf"></h3>
             <div class="news-carousel-wrapper">
-                <div class="news-carousel" id="newsCarousel">
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 1">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 2">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 1">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 2">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
+                <div class="news-carousel" id="newsCarousel2">
                 </div>
-                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </section>
         
         <div class="service-view">
             <section id="servizi-patronato">
-                <h2>Servizi Patronato</h2>
-                
-                <div class="service-container">
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/730.webp" alt="Disoccupazione">
-                        </div>
-                        <div class="service-text">
-                            <h3>Indennità di disoccupazione</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Patronato di fiducia clicca:</em> 
-                                <a href="servizi.html#indennitadidisoccupazione">Documentazione completa</a>.
-                            </p>
-                        </div>
-                    </article>
-        
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/730.webp" alt="Maternità">
-                        </div>
-                        <div class="service-text">
-                            <h3>Indennità di maternità</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Patronato di fiducia clicca:</em> 
-                                <a href="servizi.html#indennitadimaternita">Documentazione completa</a>.
-                            </p>
-                        </div>                            
-                    </article>
-        
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/lavoro.webp" alt="Infortuni">
-                        </div>
-                        <div class="service-text">
-                            <h3>Infortuni</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Patronato di fiducia clicca:</em> 
-                                <a href="servizi.html#infortuni">Documentazione completa</a>.
-                            </p>
-                        </div>
-                    </article>
-        
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/invalidita.webp" alt="Invalidità/Inabilità">
-                        </div>
-                        <div class="service-text">
-                            <h3>Invalidità/Inabilità</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di questa pratica al tuo Patronato di fiducia clicca:</em> 
-                                <a href="servizi.html#invalidita/inabilita">Documentazione completa</a>.
-                            </p>
-                        </div>
-                    </article>
-        
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/pensione.webp" alt="Pensione">
-                        </div>
-                        <div class="service-text">
-                            <h3>Pensione</h3>
-                            <p>Le diverse tipologie di pensione possibile:<br>
-                                <strong>Vecchiaia</strong>, in favore dei lavoratori dipendenti e autonomi iscritti all'assicurazione generale obbligatoria (AGO) ed alle forme esclusive, sostitutive, esonerative ed integrative della medesima, nonchè alla gestione separata che hanno raggiungo l'età stabilita dalla legge e perfezionato l'anzianità contributiva r assicurativa richiesta.<br>
-                                <strong>Pensione anticipata</strong>, prestazione economica a domanda erogata ai lavoratori dipendenti e autonomi iscritti all'assicurazione generale obbligatoria (AGO) e alle forme esclusive, sostitutive, esonerative ed integrative della medesima, nonchè alla gestione separata che hanno raggiungo, indipendentemente dall'età anagrafica, un determinato numero di settimane di contribuzione.<br>
-                                <strong>Assegno Sociale</strong>, ha sostituito dal 1996 la pensione sociale. Prestazione economica erogata a domanda, dedicata ai cittadini che si trovano in condizioni economiche particolarmente disagiate con redditi non superiori alle soglie previste annualmente dalla legge. Il diritto alla prestazione è accertato in base al reddito personale per i cittadini non coniugati e in base al reddito cumulato con quello del coniuge per i cittadini coniugati. l'assegno è concesso con carattere di provvissorietà e la verifica del possesso dei requisiti reddituali e di effettiva residenza viene fatta annualmente. Non può essere erogata all'estero. Il soggiorno all'estero del titolare, con una durata superiore ai 30 giorni, comporta la sospenzione dell'assegno. L'assegno non è soggetto a trattenute Irpef. <br>
-                                <strong>Supplemento di pensione</strong>, è un incremento della pensione liquidato a domanda sulla base di contribuzione relativa a periodi successivi alla data di decorrenza della pensione medesima. I contributi successivi alla decorrenza del primo supplemento danno luogo all aliquidazione di ulteriori supplementi. <strong>Il supplemento spetta a tutti i pensionati che continuano a versare all'Inps, nelle varie gestioni, i contributi per periodi di lavoro successivi alla decorrenza della pensione.</strong> I pensionati della Gestione separata possono chiedere il supplmento di pensione solo per i contributi versati, dopo il pensionamento, nella stessa gestione. In caso di decesso del pensionato i supplementi sono computati ai fini della misura della pensione ai superstiti.</strong><br>
-                                <strong>Pensione supplementare</strong>, è una prestazione economica liquidata a domanda al lavoratore che può fare valere contribuzione accreditata nell'assicurazione generale obbligatoria per l'invalidità, vecchiaia e superstiti non sufficiente a perfezionare il diritto ad un'altra pensione con i requisiti contributivi normalmente richiesti.<br>
-                            </p>
-                            <p>
-                                <em>Per scoprire quali documenti ti saranno utili per lo svolgimento di queste pratiche al tuo Patronato di fiducia clicca:</em> 
-                                <a href="servizi.html#pensione">Documentazione completa</a>.
-                            </p>
-                        </div>      
-                    </article>
+                <h2 id="titoloServiziPatronato"></h2>
+                <div class="service-container" id="serviziPatronatoContainer">
                 </div>
             </section>
         </div>
         
         <section class="widget">
-            <h3>Novità Patronato</h3>
+            <h3 id="titoloNovitaPatronato"></h3>
             <div class="news-carousel-wrapper">
-                <div class="news-carousel" id="newsCarousel">
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 1">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 2">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 1">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEE</h2>
-                            <p>Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali.</p>
-                        </div>
-                    </div>
-                    <div class="news-slide">
-                        <div class="news-img">
-                            <img src="novita/novita.webp" alt="Notizia 2">
-                        </div>
-                        <div class="news-text">
-                            <h2>Scadenze ISEEU</h2>
-                            <p>L'ISEEU è indispensabile per le agevolazioni universitarie. Verifica la scadenza nel tuo ateneo.</p>
-                        </div>
-                    </div>
+                <div class="news-carousel" id="newsCarousel3">
                 </div>
-                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </section>
         
         <div class="service-view">
             <section id="assistenza">
-                <h2>Assistenza</h2>                   
-                <div class="service-container">
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/colf-badanti.webp" alt="colf/badanti">   
-                        </div>
-                        <div class="service-text">
-                            <h3 id="assistenzacolf-badanti">Assistenza colf/badanti</h3>
-                            <p>Il Caf assiste qualsiasi cittadino con un collaboratore domestico alle proprie dipendenze o famiglie che hanno bisogno di assistenza nella regolamentazione del rapporto di lavoro e nei numerosi adempimenti necessari per avvalersi di figure professionali quali colf, badanti, baby sitter o assistenti alla persona
-                            <br><strong>informazioni sul contratto di lavoro</strong> di riferimento
-                            <br><strong>Redazione</strong> della lettera di assunzione
-                            <br><strong>Predisposizione delle comunicazioni e denuncia di lavoro</strong> all'inps e all'Inail 
-                            <br><strong>Elaborazione della busta paga</strong> con calcolo dei giorni di ferie, malattia, maternità ed eventuale infortunio
-                            <br><strong>Calcolo e pagamento contributi</strong> Inps
-                            <br><strong>Predisposizione</strong> della Certificazione Unica
-                            <br><strong>Calcolo e pagamento del Trattamento di fine rapporto</strong> (Tfr)
-                            </p>
-                        </div>
-                    </article>
-        
-                    <article class="service">
-                        <div class="service-img">
-                            <img src="service/assistenza-legale.webp" alt="assistenza legale">
-                        </div>
-                        <div class="service-text">
-                            <h3 id="assistenzalegale">Assistenza legale</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
-                        </div>                            
-                    </article>
+                <h2 id="titoloAssistenza"></h2>                   
+                <div class="service-container" id="serviceContainer">
+                </div>
             </section>
         </div>
 
@@ -455,7 +118,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </article>
             </section>
         </div>
@@ -463,10 +125,11 @@
     </main>
 
     <section id="cookie-privacy">
-            <div class="container">
-                <h2 style="text-align: center;">IL MOVIMENTO CRISTIANO LAVORATORI</h2>
-                <p>MCL è un <strong>movimento di lavoratori cristiani a carattere sociale, di solidarietà e volontariato senza alcuna finalità di lucro</strong>. Il M.C.L., intende promuovere l'affermazione dei <strong>principi cristiani nella vita, nella cultura, negli ordinamenti, nella legislazione</strong>. Per questo intende operare come Movimento ecclesiale di testimonianza evangelica organizzata ed in fedeltà agli orientamenti del Magistero della Chiesa, consapevole di un suo specifico ruolo nella società. Esso raggruppa coloro che, nell'applicazione della Dottrina Sociale della Chiesa secondo l'insegnamento del suo Magistero, ravvisano il fondamento e la condizione per un rinnovato ordinamento sociale, in cui siano assicurati, secondo giustizia, il <strong>riconoscimento dei diritti</strong> e la <strong>soddisfazione delle esigenze spirituali e materiali dei lavoratori</strong>. Il Movimento Cristiano Lavoratori ha natura federativa fondata sul principio della sussidiarietà e della solidarietà. Si articola sul territorio in <strong>unità di base</strong>, <strong>unioni provinciali</strong> e <strong>unioni regionali</strong>. <a href="chisiamo.html"> clicca qui per approfondire.</a></p>
-            </div>
+        <div class="container">
+            <h2 id="titoloStoriaHome"></h2>
+            <p id="descrizioneStoriaHome"></p>
+            <a id="linkStoriaHome" href="#" class="btn"></a>
+        </div>
     </section>
 
     <button id="scrollToTopBtn" aria-label="Torna su">
@@ -477,9 +140,9 @@
     </button>
            
     <section id="logos">
-            <img src="logos/mcl.jpg" alt="logo MCL">
-            <img src="logos/cafmcl.jpg" alt="logo MCL">
-            <img src="logos/sias.png" alt="logo MCL">
+            <img src="images/logos/mcl.jpg" alt="logo MCL">
+            <img src="images/logos/cafmcl.jpg" alt="logo MCL">
+            <img src="images/logos/sias.png" alt="logo MCL">
     </section>
 
     <footer>
@@ -490,7 +153,9 @@
                 <li><a href="cookie.html">Cookie</a></li>
             </ul>
         </nav>
-    </footer>
+    </footer> 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="javascript/index.js"></script> <!--specifico-->
 </body>
 </html>

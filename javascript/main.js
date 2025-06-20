@@ -1,99 +1,3 @@
-// === CAROUSEL ===
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const carouselContainer = document.querySelector('.custom-carousel');
-
-    if (track && carouselContainer) {
-        let slides = Array.from(track.children);
-
-        if (slides.length > 1) {
-            const firstClone = slides[0].cloneNode(true);
-            const lastClone = slides[slides.length - 1].cloneNode(true);
-
-            track.appendChild(firstClone);
-            track.insertBefore(lastClone, slides[0]);
-
-            slides = Array.from(track.children);
-
-            let currentIndex = 1;
-            let slideWidth = 0;
-
-            function updateSlideWidth() {
-                slideWidth = slides[0].getBoundingClientRect().width;
-            }
-
-            function updateSlidePosition(animated = true) {
-                updateSlideWidth();
-                track.classList.toggle('no-transition', !animated);
-                track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-            }
-
-            function goToNextSlide() {
-                if (currentIndex >= slides.length - 1) return;
-                currentIndex++;
-                updateSlidePosition();
-
-                if (currentIndex === slides.length - 1) {
-                    setTimeout(() => {
-                        track.classList.add('no-transition');
-                        currentIndex = 1;
-                        updateSlidePosition(false);
-                        void track.offsetWidth;
-                        track.classList.remove('no-transition');
-                    }, 500);
-                }
-            }
-
-            function goToPrevSlide() {
-                if (currentIndex <= 0) return;
-                currentIndex--;
-                updateSlidePosition();
-
-                if (currentIndex === 0) {
-                    setTimeout(() => {
-                        track.classList.add('no-transition');
-                        currentIndex = slides.length - 2;
-                        updateSlidePosition(false);
-                        void track.offsetWidth;
-                        track.classList.remove('no-transition');
-                    }, 500);
-                }
-            }
-
-            const nextBtn = document.querySelector('.next');
-            const prevBtn = document.querySelector('.prev');
-
-            nextBtn?.addEventListener('click', () => {
-                goToNextSlide();
-                resetAutoplay();
-            });
-
-            prevBtn?.addEventListener('click', () => {
-                goToPrevSlide();
-                resetAutoplay();
-            });
-
-            window.addEventListener('resize', () => {
-                updateSlideWidth();
-                updateSlidePosition(false);
-            });
-
-            updateSlideWidth();
-            updateSlidePosition(false);
-
-            let autoplayInterval = setInterval(goToNextSlide, 9000);
-
-            function resetAutoplay() {
-                clearInterval(autoplayInterval);
-                autoplayInterval = setInterval(goToNextSlide, 9000);
-            }
-
-            carouselContainer.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
-            carouselContainer.addEventListener('mouseleave', () => autoplayInterval = setInterval(goToNextSlide, 9000));
-        }
-    }
-});
-
 // === PRELOADER ===
 window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
@@ -140,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                 lat: 44.58227358010359, 
                 lng: 9.305217402995476, 
-                img: "../sedi/amicidipietranera.webp"
+                img: "images/sedi/amicidipietranera.webp",
+                tipo: "circolo"
             },  
             { 
                 nome: "Associazione Cristiana Genitori", 
@@ -150,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",
                 lat: 44.52881782197134, 
                 lng: 8.868577452660162,
+                tipo: "circolo"
             },
             { 
                 nome: "Associazione Il Mulino di Foppiano", 
@@ -159,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.583119326629905, 
                 lng: 9.319567922090107,
+                tipo: "circolo"
             },
             { 
                 nome: "Circolo La Sportiva MCL Preli", 
@@ -168,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 15:30-19.30 e 21:30-00:30", 
                 lat: 44.44018415472597, 
                 lng: 8.95946525277031, 
+                tipo: "circolo"
             },
             { 
                 nome: "Circolo MCL Amici Carpeneto", 
@@ -177,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",
                 lat: 44.582651205439255, 
                 lng: 9.222330352584963,
+                tipo: "circolo"
             }, 
             { 
                 nome: "Circolo MCL Benedetto XV", 
@@ -186,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "sedi/cafcorsotorino.webp" 
+                tipo: "circolo",
+                img: "images/sedi/cafcorsotorino.webp" 
             },
             { 
                 nome: "Circolo MCL Giovanni XXIII", 
@@ -196,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.42523165132163, 
                 lng: 8.921859812292416,
+                tipo: "circolo"
             },
             { 
                 nome: "Circolo MCL Giuseppe Fanin",  
@@ -205,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",
                 lat: 44.40443238091789, 
                 lng: 8.952071870897205, 
+                tipo: "circolo"
             },
             { 
                 nome: "Circolo MCL Orizzonte", 
@@ -214,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00", 
                 lat: 44.57388292309463, 
                 lng: 8.942374103501315,
+                tipo: "circolo"
             },
             { 
                 nome: "Circolo Padre Domenico Bonassi", 
@@ -223,7 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-13 e 14.30-18.30", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "sedi/cafcorsotorino.webp" 
+                tipo: "caf/patronato",
+                img: "images/sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Provinciale MCL Genova", 
@@ -233,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Ven: 09-18.00",
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "sedi/cafcorsotorino.webp" 
+                tipo: "caf/patronato",
+                img: "images/sedi/cafcorsotorino.webp" 
             }, 
             { 
                 nome: "Unione Regionale MCL Liguria", 
@@ -243,7 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orari: "Lun-Gio: 09-13 e 14:30-18:30 <br> Ven: 09-13 e 14:30-17", 
                 lat: 44.40105347772336, 
                 lng: 8.950512096947845,
-                img: "sedi/cafcorsotorino.webp" 
+                tipo: "caf/patronato",
+                img: "images/sedi/cafcorsotorino.webp" 
             }, 
     ]
 
@@ -254,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="sede-popup">
                     <strong>${sede.nome}</strong><br>
                     <span class="popup-indirizzo">${sede.indirizzo}</span><br>
+                    <span class="badge badge-${sede.tipo === 'caf/patronato' ? 'caf' : 'circolo'}">${sede.tipo}</span><br>
                     <div class="popup-contatti">
                         <span><i class="fas fa-phone"></i> ${sede.telefono}</span><br>
                         <span><i class="fas fa-envelope"></i> <a href="mailto:${sede.email}">${sede.email}</a></span><br>
@@ -271,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="sede-header">
                     <strong>${sede.nome}</strong><br>
                     <span class="indirizzo">${sede.indirizzo}</span>
+                    <span class="badge badge-${sede.tipo === 'caf/patronato' ? 'caf' : 'circolo'}">${sede.tipo}</span>
                 </div>
                 <div class="sede-dettagli" style="display: none;">
                     <div class="contatti-info">

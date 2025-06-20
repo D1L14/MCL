@@ -1,0 +1,216 @@
+carouselHomepage:
+  slides:
+    - tipo: "immagine"
+      immagine: "images/homecarousel/mclwallpaper.jpg"
+      alt: "Slide mclwallpaper"
+
+    - tipo: "testo"
+      immagine: "images/homecarousel/peoples.png"
+      alt: "Slide peoples"
+      titolo: "Benvenuto nella homepage MCL Genova"
+      paragrafo: |
+        Esplora e scopri la realtà del Movimento Cristiano Lavoratori di Genova.<br>
+        Esplora la mappa e trova la sede genovese più vicina:<br>
+        <a href="#sedi-contatti">Mappa sedi MCL Genova</a>
+
+    - tipo: "immagine"
+      immagine: "images/homecarousel/cafwallpaper.jpg"
+      alt: "Slide cafwallpaper"
+
+    - tipo: "testo"
+      immagine: "images/homecarousel/couple.png"
+      alt: "Slide couple"
+      titolo: "Scopri i nostri <a href='servizi.html'>servizi</a>"
+      paragrafo: |
+        Dai servizi del Caf SIAS al Patronato MCL.<br>
+        per maggiori dettagli:<br>
+        <a href="servizi.html#servizi-caf">Caf</a> - <a href="servizi.html#servizi-patronato">Patronato</a>
+
+    - tipo: "immagine"
+      immagine: "images/homecarousel/siaswallpaper.png"
+      alt: "Slide siaswallpaper"
+
+    - tipo: "immagine"
+      immagine: "images/homecarousel/scu.png"
+      alt: "Slide Servizio Civile Universale"
+
+
+newsCarousel1:
+  titolo_sezione: "Notizie Eventi"
+  notizie:
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 1"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 2"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 3"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 4"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+
+
+serviziCafContainer:
+  titolo_sezione: "Servizi Caf"
+  servizi:
+    - titolo: "IMU"
+      immagine: images/service/imu.webp
+      alt: "IMU"
+      testoHTML: >
+        <strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong>  (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli.
+      link: servizi.html#imu
+
+    - titolo: "ISEE/ISEEU"
+      immagine: images/service/isee.webp
+      alt: "ISEE/ISEU"
+      testoHTML: >
+        L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un indicatore utile alla valutazione e confronto della situazione economica di un nucleo famigliare.
+        <br>L'ISEEU, l'<strong>indicatore della situazione economica equivalente universitaria</strong>.
+      link: servizi.html#isee/iseeu
+
+    - titolo: "Modello 730"
+      immagine: images/service/730.webp
+      alt: "Modello 730"
+      testoHTML: >
+        Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva.
+      link: servizi.html#modello730
+
+    - titolo: "RED"
+      immagine: images/service/red.webp
+      alt: "RED"
+      testoHTML: >
+        La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
+      link: servizi.html#red
+
+    - titolo: "Successioni"
+      immagine: images/service/successioni.webp
+      alt: "Successioni"
+      testoHTML: >
+        Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
+        <br><strong>Attraverso la dichiarazione di successione</strong>, gli eredi designati dal deceduto o quelli stabiliti dalla legge devono presentare una dichiarazione all'Agenzia delle Entrate entro un anno dalla data del decesso. Lo stesso vale per tutoti o curatoridell'eredità e tutti coloro che sono immessi nel possesso dei beni per effetto della dichiarazioen di morte presunta dell'erede.
+      link: servizi.html#successioni
+
+
+newsCarousel2:
+  titolo_sezione: "Novità Caf"
+  notizie:
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 1"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 2"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 3"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 4"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+
+
+serviziPatronatoContainer:
+  titolo_sezione: "Servizi Patronato"
+  servizi:
+    - titolo: "Indennità di disoccupazione"
+      immagine: images/service/730.webp
+      alt: "Disoccupazione"
+      testoHTML: >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
+      link: servizi.html#indennitadidisoccupazione
+
+    - titolo: "Indennità di maternità"
+      immagine: images/service/730.webp
+      alt: "Maternità"
+      testoHTML: >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
+      link: servizi.html#indennitadimaternita
+
+    - titolo: "Infortuni"
+      immagine: images/service/lavoro.webp
+      alt: "Infortuni"
+      testoHTML: >
+        <strong>Il Patronato Sias</strong> offre assistenza e consulenza per gli infortuni sul lavoro e le malattie professionali con il calcolo dell'indennità temporanea e richiesta all'INAIL, la revisione delle rendite, domande di aggravamento e revisione del danno biologico. Se necessario è possibile ottenere assistenza legale.
+      link: servizi.html#infortuni
+
+    - titolo: "Invalidità/Inabilità"
+      immagine: images/service/invalidita.webp
+      alt: "Invalidità/Inabilità"
+      testoHTML: >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
+      link: servizi.html#invalidita/inabilita
+
+    - titolo: "Pensione"
+      immagine: images/service/pensione.webp
+      alt: "Pensione"
+      testoHTML: >
+        Le diverse tipologie di pensione possibili includono:
+        <strong>Pensione di vecchiaia</strong>: per lavoratori dipendenti e autonomi che hanno raggiunto l'età pensionabile e i requisiti contributivi.<br>
+        <strong>Pensione anticipata</strong>: erogata indipendentemente dall'età anagrafica, ma con un numero minimo di settimane di contribuzione.<br>
+        <strong>Assegno Sociale</strong>: dedicato a cittadini con redditi bassi. È soggetto a verifica annuale dei requisiti e non può essere erogato all'estero.<br>
+        <strong>Supplemento di pensione</strong>: aumento della pensione basato su contributi versati dopo il pensionamento. Spetta a chi continua a lavorare e versare contributi.<br>
+        <strong>Pensione supplementare</strong>: per chi ha contribuito in più gestioni ma non ha raggiunto i requisiti per una pensione autonoma in una singola gestione.
+      link: servizi.html#pensione
+
+newsCarousel3:
+  titolo_sezione: "Novità Patronato"
+  notizie:
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 1"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 2"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 3"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+    - immagine: "images/novita/novita.webp"
+      alt: "Notizia 4"
+      titolo: "Scadenze ISEE"
+      descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
+
+serviceContainer:
+  titolo_sezione: "Assistenza"
+  servizi:
+    - titolo: "Assistenza Colf e badanti"
+      immagine: images/service/colf-badanti.webp
+      alt: "Assistenza colf/badanti"
+      testoHTML: >
+        Il Caf assiste qualsiasi cittadino con un collaboratore domestico alle proprie dipendenze o famiglie che hanno bisogno di assistenza nella regolamentazione del rapporto di lavoro e nei numerosi adempimenti necessari per avvalersi di figure professionali quali colf, badanti, baby sitter o assistenti alla persona.     
+      link: servizi.html#assistenza-colf-e-badanti
+
+    - titolo: "Assistenza legale"
+      immagine: images/service/assistenza-legale.webp
+      alt: "Assistenza legale"
+      testoHTML: >
+        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+      link: servizi.html#assistenza-legale
+
+
+mappa:
+  titolo_sezione: "Mappa sedi e contatti"
+  testo_ricerca: "Cerca una sede..."
+  bottone_zoom_in: "+"
+  bottone_zoom_out: "-"
+
+cookie-privacy:
+  titolo_sezione: "IL MOVIMENTO CRISTIANO LAVORATORI"
+  descrizione: >
+    MCL è un movimento di lavoratori cristiani a carattere sociale, di solidarietà e volontariato senza alcuna finalità di lucro. MCL intende promuovere l'affermazione dei principi cristiani nella vita, nella cultura, negli ordinamenti, nella legislazione. Per questo intende operare come Movimento ecclesiale di testimonianza evangelica organizzata...
+  link_approfondimento: "chisiamo.html"
+  testo_bottone: "clicca qui per approfondire"
+
+
+
