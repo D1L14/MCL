@@ -1,11 +1,11 @@
 carouselHomepage:
   slides:
     - tipo: "immagine"
-      immagine: "images/homecarousel/mclwallpaper.jpg"
+      immagine: "homecarousel/mclwallpaper.jpg"
       alt: "Slide mclwallpaper"
 
     - tipo: "testo"
-      immagine: "images/homecarousel/peoples.png"
+      immagine: "homecarousel/peoples.png"
       alt: "Slide peoples"
       titolo: "Benvenuto nella homepage MCL Genova"
       paragrafo: |
@@ -14,11 +14,11 @@ carouselHomepage:
         <a href="#sedi-contatti">Mappa sedi MCL Genova</a>
 
     - tipo: "immagine"
-      immagine: "images/homecarousel/cafwallpaper.jpg"
+      immagine: "homecarousel/cafwallpaper.jpg"
       alt: "Slide cafwallpaper"
 
     - tipo: "testo"
-      immagine: "images/homecarousel/couple.png"
+      immagine: "homecarousel/couple.png"
       alt: "Slide couple"
       titolo: "Scopri i nostri <a href='servizi.html'>servizi</a>"
       paragrafo: |
@@ -27,30 +27,30 @@ carouselHomepage:
         <a href="servizi.html#servizi-caf">Caf</a> - <a href="servizi.html#servizi-patronato">Patronato</a>
 
     - tipo: "immagine"
-      immagine: "images/homecarousel/siaswallpaper.png"
+      immagine: "homecarousel/siaswallpaper.png"
       alt: "Slide siaswallpaper"
 
     - tipo: "immagine"
-      immagine: "images/homecarousel/scu.png"
+      immagine: "homecarousel/scu.png"
       alt: "Slide Servizio Civile Universale"
 
 
 newsCarousel1:
   titolo_sezione: "Notizie Eventi"
   notizie:
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 1"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 2"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 3"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 4"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
@@ -60,14 +60,14 @@ serviziCafContainer:
   titolo_sezione: "Servizi Caf"
   servizi:
     - titolo: "IMU"
-      immagine: images/service/imu.webp
+      immagine: service/imu.webp
       alt: "IMU"
       testoHTML: >
         <strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong>  (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli.
       link: servizi.html#imu
 
     - titolo: "ISEE/ISEEU"
-      immagine: images/service/isee.webp
+      immagine: service/isee.webp
       alt: "ISEE/ISEU"
       testoHTML: >
         L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un indicatore utile alla valutazione e confronto della situazione economica di un nucleo famigliare.
@@ -75,21 +75,21 @@ serviziCafContainer:
       link: servizi.html#isee/iseeu
 
     - titolo: "Modello 730"
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Modello 730"
       testoHTML: >
         Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva.
       link: servizi.html#modello730
 
     - titolo: "RED"
-      immagine: images/service/red.webp
+      immagine: service/red.webp
       alt: "RED"
       testoHTML: >
         La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
       link: servizi.html#red
 
     - titolo: "Successioni"
-      immagine: images/service/successioni.webp
+      immagine: service/successioni.webp
       alt: "Successioni"
       testoHTML: >
         Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
@@ -100,19 +100,19 @@ serviziCafContainer:
 newsCarousel2:
   titolo_sezione: "Novità Caf"
   notizie:
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 1"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 2"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 3"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 4"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
@@ -122,35 +122,35 @@ serviziPatronatoContainer:
   titolo_sezione: "Servizi Patronato"
   servizi:
     - titolo: "Indennità di disoccupazione"
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Disoccupazione"
       testoHTML: >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
       link: servizi.html#indennitadidisoccupazione
 
     - titolo: "Indennità di maternità"
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Maternità"
       testoHTML: >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
       link: servizi.html#indennitadimaternita
 
     - titolo: "Infortuni"
-      immagine: images/service/lavoro.webp
+      immagine: service/lavoro.webp
       alt: "Infortuni"
       testoHTML: >
         <strong>Il Patronato Sias</strong> offre assistenza e consulenza per gli infortuni sul lavoro e le malattie professionali con il calcolo dell'indennità temporanea e richiesta all'INAIL, la revisione delle rendite, domande di aggravamento e revisione del danno biologico. Se necessario è possibile ottenere assistenza legale.
       link: servizi.html#infortuni
 
     - titolo: "Invalidità/Inabilità"
-      immagine: images/service/invalidita.webp
+      immagine: service/invalidita.webp
       alt: "Invalidità/Inabilità"
       testoHTML: >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec
       link: servizi.html#invalidita/inabilita
 
     - titolo: "Pensione"
-      immagine: images/service/pensione.webp
+      immagine: service/pensione.webp
       alt: "Pensione"
       testoHTML: >
         Le diverse tipologie di pensione possibili includono:
@@ -164,19 +164,19 @@ serviziPatronatoContainer:
 newsCarousel3:
   titolo_sezione: "Novità Patronato"
   notizie:
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 1"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 2"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 3"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
-    - immagine: "images/novita/novita.webp"
+    - immagine: "novita/novita.webp"
       alt: "Notizia 4"
       titolo: "Scadenze ISEE"
       descrizione: "Ricorda di presentare l'ISEE entro i termini previsti per accedere alle agevolazioni fiscali."
@@ -185,14 +185,14 @@ serviceContainer:
   titolo_sezione: "Assistenza"
   servizi:
     - titolo: "Assistenza Colf e badanti"
-      immagine: images/service/colf-badanti.webp
+      immagine: service/colf-badanti.webp
       alt: "Assistenza colf/badanti"
       testoHTML: >
         Il Caf assiste qualsiasi cittadino con un collaboratore domestico alle proprie dipendenze o famiglie che hanno bisogno di assistenza nella regolamentazione del rapporto di lavoro e nei numerosi adempimenti necessari per avvalersi di figure professionali quali colf, badanti, baby sitter o assistenti alla persona.     
       link: servizi.html#assistenza-colf-e-badanti
 
     - titolo: "Assistenza legale"
-      immagine: images/service/assistenza-legale.webp
+      immagine: service/assistenza-legale.webp
       alt: "Assistenza legale"
       testoHTML: >
         Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
