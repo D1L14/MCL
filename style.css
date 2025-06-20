@@ -257,14 +257,14 @@ body {
 
 .slide-text {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  max-width: 90%;
+  max-width: 70%;
   background: rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
 }
 
@@ -657,6 +657,7 @@ section h2::after {
   padding-bottom: 5px;
 }
 .sede-dettagli {
+  text-align: left;
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 8px;
@@ -674,7 +675,7 @@ section h2::after {
 .toggle-dettagli {
   font-size: 12px;
   padding: 3px 5px;
-  background-color: var(--accent-color);
+  background-color: #ddd;
   color: var(--secondary-color);
   border: none;
   border-radius: 4px;
@@ -683,12 +684,30 @@ section h2::after {
   transition: var(--transition);
 }
 .toggle-dettagli:hover {
-  background-color: var(--background-color);
   transform: scale(1.05);
 }
+.badge {
+  display: inline-block;
+  padding: 2.5px 6px;
+  font-size: 0.65em;
+  color: white;
+  border-radius: 4px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+}
+
+.badge-circolo {
+  background-color: var(--background-color);
+}
+
+.badge-caf {
+  background-color: var(--accent-color);
+}
+
 /* Stile popup */
 .sede-popup {
-  padding: 3px;
+  padding: 1.5px;
 }
 .popup-indirizzo {
   font-family: var(--font-primary);
@@ -701,6 +720,13 @@ section h2::after {
   margin-top: 3px;
   font-size: 0.95em;
 }
+.sede-popup img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
 /* Stile controlli mappa */
 .zoom-controls {
   position: absolute;
