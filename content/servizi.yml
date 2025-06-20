@@ -2,7 +2,7 @@ serviziCafContainer:
   titolo_sezione: "Servizi Caf"
   servizi:
     - titolo: "IMU"
-      immagine: images/service/imu.webp
+      immagine: service/imu.webp
       alt: "Imu"
       testoHTML: >
         <strong>L'imposta municipale propria</strong>, è un'imposta dovuta per il <strong>possesso dei beni immobiliari</strong> (escluse le abitazioni principali classificate nelle categorie catastali diverse da A/1, A/8 e A/9), aree fabbricabili e terreni agricoli. Va pagata al comune corrispondente tramite modello F24 in due rate pari al 50% dell'imposta annua (acconto metà giugno, saldo metà dicembre), oppure in una rata unica pari al 100%.
@@ -15,7 +15,7 @@ serviziCafContainer:
       link: servizi.html#imu
 
     - titolo: "ISEE/ISEEU" #risolto
-      immagine: images/service/isee.webp 
+      immagine: service/isee.webp 
       alt: "Isee"
       testoHTML: >
         L'ISEE, l'<strong>indicatore della situazione economica equivalente</strong>, è un'indicatore utile alla valutazione e confronto della <strong>situazione economica di un nucleo famigliare</strong> che intendano richiedere una <strong>prestazione sociale agevolata o bonus</strong>.
@@ -29,7 +29,7 @@ serviziCafContainer:
       link: servizi.html#iseeiseeu
 
     - titolo: "Modello 730"
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Modello 730"
       testoHTML: >
         Il modello più diffuso per presentare la propria <strong>dichiarazione dei redditi annuale</strong> come lavoratore dipendente e pensionato ma accessibile anche a coloro che hanno percepito redditi da lavoro autonomo senza partita iva. L'Agenzia delle Entrate richiede la ricezione del Modello 730 entro il 30 settembre.
@@ -43,7 +43,7 @@ serviziCafContainer:
       link: servizi.html#modello-730
 
     - titolo: "RED"
-      immagine: images/service/red.webp
+      immagine: service/red.webp
       alt: "Red"
       testoHTML: >
         La certificazione della situazione reddituale dei <strong>pensionati INPS</strong>. Necessario per la comunicazione dei propri redditi e se previsto anche i redditi di componenti del nucleo familiare.
@@ -56,7 +56,7 @@ serviziCafContainer:
       link: servizi.html#red
 
     - titolo: "Successioni"
-      immagine: images/service/successioni.webp
+      immagine: service/successioni.webp
       alt: "Successioni"
       testoHTML: >
         Gli eredi sono tenuti alla presentazione della dichiarazione di successione e relative volture.
@@ -70,35 +70,35 @@ serviziPatronatoContainer:
   titolo_sezione: "Servizi Patronato"
   servizi:
     - titolo: "Indennità di disoccupazione" #risolto
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Disoccupazione"
       testoHTML: >
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
       link: servizi.html#indennit-di-disoccupazione
 
     - titolo: "Indennità di maternità" #risolto
-      immagine: images/service/730.webp
+      immagine: service/730.webp
       alt: "Maternità"
       testoHTML: >
          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
       link: servizi.html#indennit-di-maternit
 
     - titolo: "Infortuni"
-      immagine: images/service/lavoro.webp
+      immagine: service/lavoro.webp
       alt: "Infortuni"
       testoHTML: >
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
       link: servizi.html#infortuni
 
     - titolo: "Invalidità/Inabilità" #risolto
-      immagine: images/service/invalidita.webp
+      immagine: service/invalidita.webp
       alt: "Invalidità/Inabilità"
       testoHTML: >
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architec</p>
       link: servizi.html#invaliditinabilit
 
     - titolo: "Pensione"
-      immagine: images/service/pensione.webp
+      immagine: service/pensione.webp
       alt: "Pensione"
       testoHTML: >
         <p>Le diverse tipologie di pensione possibili includono:</p>
@@ -113,7 +113,7 @@ serviceContainer:
   titolo_sezione: "Assistenza"
   servizi:
     - titolo: "Assistenza Colf e badanti"
-      immagine: images/service/colf-badanti.webp
+      immagine: service/colf-badanti.webp
       alt: "Assistenza colf/badanti"
       testoHTML: >
         Le diverse tipologie di pensione possibili includono:
@@ -125,7 +125,7 @@ serviceContainer:
       link: servizi.html#assistenza-colf-e-badanti
 
     - titolo: "Assistenza legale"
-      immagine: images/service/assistenza-legale.webp
+      immagine: service/assistenza-legale.webp
       alt: "Assistenza legale"
       testoHTML: >
         Le diverse tipologie di pensione possibili includono:
